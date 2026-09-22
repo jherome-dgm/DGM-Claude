@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="images/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Homemade+Apple&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
   <!-- ==========================================================================
        GLOBAL: Header / Main Navigation
        ========================================================================== -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header site-header--overlay" id="siteHeader">
     <div class="site-header__inner">
       <a href="/" class="logo">
         <img class="logo__mark" src="images/brand/dgm-logo.png" alt="DGM">
@@ -57,15 +57,14 @@
               </ul>
             </div>
           </li>
-          <li class="has-dropdown">
+          <li class="has-dropdown is-active">
             <a href="/digital-marketing-services">Digital Marketing Services
               <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <div class="main-nav__dropdown">
               <ul class="main-nav__dropdown-menu">
-                <li><a href="/ppc-management">PPC Management</a></li>
-                <li><a href="#">Sales &amp; Marketing</a></li>
-                <li><a href="/sales-and-marketing-roadmap">Roadmap</a></li>
+                <li><a href="/ppc-management" aria-current="page">PPC Management</a></li>
+                <li><a href="/sales-and-marketing-roadmap">Sales &amp; Marketing Roadmap</a></li>
               </ul>
             </div>
           </li>
@@ -79,14 +78,599 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (PPC Management): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (PPC Management): Hero
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">PPC Management — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Take the First Step</p>
+          <h1 class="hero__heading">Not Seeing the <span class="text-accent">Cash</span> from Your Clicks?</h1>
+          <p class="hero__text">If you're looking to unlock the power of Google Ads, click below to schedule your no-obligation Discovery Call or Google Ads Audit with either James or Danny.</p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Book a Google Ads Audit</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/urffj3o18jy7k?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): PPC agency intro
+       ========================================================================== -->
+  <section class="ppc-intro reveal">
+    <div class="container ppc-intro__inner">
+
+      <div class="ppc-intro__content">
+        <h2 class="ppc-intro__heading">Looking for a PPC agency in Birmingham?</h2>
+        <p>At DGM, we've been a trusted digital marketing agency for over 15 years. As a full-circle digital agency, we understand the bigger picture and know how to make a Google Ads campaign integrate seamlessly into your overall marketing strategy. Our experienced team is dedicated to helping business owners and marketing managers navigate the complexities of Google Ads with clarity, transparency, and ease.</p>
+        <p>We pride ourselves on truly understanding your business, objectives, unique challenges, and the market you operate in. We&rsquo;re always realistic about the numbers, offering an honest assessment of achievable ROI with a no-BS approach.</p>
+        <p>Partner with us for your Google Ads Management, and experience the difference a committed, knowledgeable team can make in achieving your sales and marketing goals. You can trust us to provide safe hands to guide you through getting started with or optimising Google Ads, because we&rsquo;re not just the experts&mdash;we genuinely give a s**t.</p>
+        <p class="ppc-intro__signature">James &amp; Danny</p>
+      </div>
+
+      <div class="ppc-intro__media">
+        <img src="images/sections/ppc-agency-birmingham.jpg" alt="James and Danny from DGM standing beside Birmingham's iron bull statue">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): Why Google Ads
+       ========================================================================== -->
+  <section class="why-ads reveal">
+    <div class="container">
+      <h2 class="why-ads__heading">Why Google Ads?</h2>
+
+      <div class="why-ads__grid">
+
+        <div class="why-ads__item">
+          <img class="why-ads__icon" src="images/icons/why-google-ads/google-ads.svg" alt="">
+          <h3 class="why-ads__title">Get to The Top of Google</h3>
+          <p class="why-ads__text">Google Ads gives your business direct access to appear at the top of search engine results pages (SERPs) for relevant searches. This prime position increases your online visibility and maximises the chances of users clicking on your ads.</p>
+        </div>
+
+        <div class="why-ads__item">
+          <img class="why-ads__icon" src="images/icons/why-google-ads/competitor-analysis.svg" alt="">
+          <h3 class="why-ads__title">Beat Your Competition</h3>
+          <p class="why-ads__text">Google Ads provides you with the tools to stay ahead and capture the attention of your potential customers other competitors get a chance to, however good their SEO. With great ads and targetting you can dominate.</p>
+        </div>
+
+        <div class="why-ads__item">
+          <img class="why-ads__icon" src="images/icons/why-google-ads/target-audience.svg" alt="">
+          <h3 class="why-ads__title">Laser-Targeted Advertising</h3>
+          <p class="why-ads__text">Precisely target your ads to reach the most relevant audience based on factors such as location, demographics, interests, and search intent. This precision ensures that your ad budget is spent efficiently on potential customers.</p>
+        </div>
+
+        <div class="why-ads__item">
+          <img class="why-ads__icon" src="images/icons/why-google-ads/evaluation.svg" alt="">
+          <h3 class="why-ads__title">Instant Results</h3>
+          <p class="why-ads__text">Unlike many traditional marketing channels, Google Ads can deliver nearly instant results. Your ads can start generating traffic and leads as soon as your campaign is live, providing a rapid boost to your online presence.</p>
+        </div>
+
+        <div class="why-ads__item">
+          <img class="why-ads__icon" src="images/icons/why-google-ads/pound.svg" alt="">
+          <h3 class="why-ads__title">Measurable ROI</h3>
+          <p class="why-ads__text">Google Ads offers robust tracking and analytics tools, allowing you to measure the return on investment (ROI) of your campaigns accurately. You can see which keywords, ads, and strategies are delivering the best results and adjust your approach accordingly.</p>
+        </div>
+
+        <div class="why-ads__item">
+          <img class="why-ads__icon" src="images/icons/why-google-ads/advertising-banner.svg" alt="">
+          <h3 class="why-ads__title">Control &amp; Flexibility</h3>
+          <p class="why-ads__text">Google Ads gives you the flexibility to adapt quickly.  You can adjust your ad spend, scale campaigns up or down, pause or resume them based on your business needs and market dynamics. Whether you're responding to seasonal trends, budget changes, or shifting business priorities.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): Who's This Ideal For
+       ========================================================================== -->
+  <section class="ppc-ideal reveal">
+    <div class="container">
+      <h2 class="ppc-ideal__heading">Who's This <span class="text-accent">Ideal</span> For?</h2>
+
+      <div class="ppc-ideal__grid">
+
+        <div class="ppc-ideal__item">
+          <svg class="ppc-ideal__check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3 class="ppc-ideal__title">Growing SMEs Ready to Scale</h3>
+            <p class="ppc-ideal__text">Ideal for small and medium-sized enterprises that are ready to scale their operations and seek to leverage Google Ads for strategic growth and customer acquisition.</p>
+          </div>
+        </div>
+
+        <div class="ppc-ideal__item">
+          <svg class="ppc-ideal__check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3 class="ppc-ideal__title">Businesses Seeking Rhythmic Acquisition of Leads</h3>
+            <p class="ppc-ideal__text">Perfect for companies that want to establish a consistent and reliable source of leads through well-structured Google Ads campaigns.</p>
+          </div>
+        </div>
+
+        <div class="ppc-ideal__item">
+          <svg class="ppc-ideal__check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3 class="ppc-ideal__title">Entrepreneurs Committed to Strategic Investment</h3>
+            <p class="ppc-ideal__text">Tailored for visionary entrepreneurs who recognise the significance of investing in effective marketing strategies and are prepared to allocate budget wisely to fuel business growth.</p>
+          </div>
+        </div>
+
+        <div class="ppc-ideal__item">
+          <svg class="ppc-ideal__check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3 class="ppc-ideal__title">Marketing Novices</h3>
+            <p class="ppc-ideal__text">Designed for those who may be new to getting leads from Google and want expert guidance and support to get started, ensuring they make the most of this powerful advertising platform.</p>
+          </div>
+        </div>
+
+        <div class="ppc-ideal__item">
+          <svg class="ppc-ideal__check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3 class="ppc-ideal__title">Enhancing Existing Google Ads Campaigns</h3>
+            <p class="ppc-ideal__text">Tailored for business owners already running Google Ads campaigns, our service provides expert guidance and fine-tuning to boost the performance of your existing campaigns.</p>
+          </div>
+        </div>
+
+        <div class="ppc-ideal__item">
+          <svg class="ppc-ideal__check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3 class="ppc-ideal__title">Companies Aiming For Measurable Results</h3>
+            <p class="ppc-ideal__text">Tailored for businesses that prioritise measurable and data-driven marketing strategies, allowing them to track ROI and make informed decisions to grow their customer base effectively.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): Who This Is NOT For
+       ========================================================================== -->
+  <section class="ppc-not-ideal reveal">
+    <div class="container">
+      <h2 class="ppc-not-ideal__heading">Who This Is <span class="text-accent">NOT</span> For?</h2>
+
+      <div class="ppc-not-ideal__grid">
+
+        <div class="ppc-not-ideal__item">
+          <svg class="ppc-not-ideal__cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="ppc-not-ideal__title">Risk-Adverse Business Owners</h3>
+            <p class="ppc-not-ideal__text">If you prefer conservative, low-risk marketing approaches and are uncomfortable with the inherent experimentation and adaptability required for successful Google Ads campaigns, this platform may not be the best fit for your business.</p>
+          </div>
+        </div>
+
+        <div class="ppc-not-ideal__item">
+          <svg class="ppc-not-ideal__cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="ppc-not-ideal__title">Budget-Constrained Businesses</h3>
+            <p class="ppc-not-ideal__text">Google Ads can be cost-effective, but it may not be suitable for businesses with extremely limited marketing budgets, as it requires a reasonable investment to see significant results. We can advise you on budgets.</p>
+          </div>
+        </div>
+
+        <div class="ppc-not-ideal__item">
+          <svg class="ppc-not-ideal__cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="ppc-not-ideal__title">Short-Term Marketing Goals</h3>
+            <p class="ppc-not-ideal__text">If your business is solely focused on short-term objectives and is not willing to commit to a longer-term advertising strategy, Google Ads may not align with your goals.</p>
+          </div>
+        </div>
+
+        <div class="ppc-not-ideal__item">
+          <svg class="ppc-not-ideal__cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="ppc-not-ideal__title">Lack of Clear Value Proposition</h3>
+            <p class="ppc-not-ideal__text">If your business struggles to articulate a clear value proposition or unique selling points, Google Ads may not be effective in driving conversions, as it relies on compelling offers that buyers want to engage with.</p>
+          </div>
+        </div>
+
+        <div class="ppc-not-ideal__item">
+          <svg class="ppc-not-ideal__cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="ppc-not-ideal__title">Unwillingness to Adapt or Feedback</h3>
+            <p class="ppc-not-ideal__text">Google Ads campaigns require ongoing adjustments and optimisations. If your business is not open to adapting strategies based on data and insights, it may not benefit fully from this platform.</p>
+          </div>
+        </div>
+
+        <div class="ppc-not-ideal__item">
+          <svg class="ppc-not-ideal__cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="ppc-not-ideal__title">Poor Web Presence</h3>
+            <p class="ppc-not-ideal__text">A Google Ad is essentially selling a user on clicking through to see more on your website and if your website is poor or perhaps simply not as good as the competition's, even the best optimised campaign in the world will struggle.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): Why Work With Us
+       ========================================================================== -->
+  <section class="ppc-why reveal">
+    <div class="container">
+      <h2 class="ppc-why__heading">Why Work With Us?</h2>
+
+      <div class="ppc-why__grid">
+
+        <div class="ppc-why__item">
+          <img class="ppc-why__icon" src="images/icons/ppc-why/trophy.svg" alt="">
+          <h3 class="ppc-why__title">Award Winners</h3>
+          <p class="ppc-why__text">Previous winners of the Best Business Enabler Award at the National Entrepreneur Awards, we're recognised by the Entrepreneurs Circle, one of the UK largest network of SMEs as a trusted digital marketing partner having demonstrated our commitment to delivering high-quality services to scores of EC members.</p>
+        </div>
+
+        <div class="ppc-why__item">
+          <img class="ppc-why__icon" src="images/icons/ppc-why/google.svg" alt="">
+          <h3 class="ppc-why__title">Google Ads Experts</h3>
+          <p class="ppc-why__text">Our team consists of Google Ads experts, each certified and highly experienced, having generated tens of millions of pounds through Google Ads across a diverse range of industries. Our deep expertise allows us to craft strategies that are not just effective but also tailor-made to each business's unique needs, ensuring the maximum impact for every ad pound spent.</p>
+        </div>
+
+        <div class="ppc-why__item">
+          <img class="ppc-why__icon" src="images/icons/ppc-why/credit.svg" alt="">
+          <h3 class="ppc-why__title">Get &pound;400 Free Ad Spend</h3>
+          <p class="ppc-why__text">Elevate your initial Google Ads experience with a substantial &pound;400 ad credit for new accounts. This credit is a fantastic way to augment your early advertising efforts, allowing more room to experiment and achieve greater impact. Our skilled team will manage this credit to ensure it's used in the most strategic and effective manner, aligning with your unique marketing objectives and maximising early campaign success.</p>
+        </div>
+
+        <div class="ppc-why__item">
+          <img class="ppc-why__icon" src="images/icons/ppc-why/pound.svg" alt="">
+          <h3 class="ppc-why__title">Cost-Effective</h3>
+          <p class="ppc-why__text">Although sometimes, we're not always the cheapest option, but we ALWAYS offer great value for money. We pride ourselves on being competitively but fairly priced, enabling us to use the best people and tools to provide high-quality, hands-on and result-driven Google Ads management.</p>
+        </div>
+
+        <div class="ppc-why__item">
+          <img class="ppc-why__icon" src="images/icons/ppc-why/analysis.svg" alt="">
+          <h3 class="ppc-why__title">Transparent Reporting &amp; Call Tracking</h3>
+          <p class="ppc-why__text">Transparency is key in our reporting approach. We ensure you understand what's working and why, without the complexity of doing it yourself. Our reporting is thorough and clear, incorporating premium tools like advanced call &amp; form entry tracking which are usually paid extras elsewhere. We believe in keeping you informed and empowered about your campaign's performance.</p>
+
+          <div class="ppc-why__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--navy">Book a Google Ads Audit</a>
+          </div>
+        </div>
+
+        <div class="ppc-why__item">
+          <img class="ppc-why__icon" src="images/icons/ppc-why/business.svg" alt="">
+          <h3 class="ppc-why__title">Beyond The Dashboard</h3>
+          <p class="ppc-why__text">Our expertise extends far beyond the technicalities of Google Ads campaign management. We delve into aspects like optimising offers, refining landing pages, and enhancing follow-up strategies. This holistic approach ensures that every element of your digital marketing works in synergy, amplifying the effectiveness of your Google Ads campaigns.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): How it works
+       ========================================================================== -->
+  <section class="ppc-how reveal">
+    <div class="container">
+      <h2 class="ppc-how__heading">How it works</h2>
+
+      <div class="ppc-how__step">
+        <div class="ppc-how__step-header">Step 1:</div>
+        <div class="ppc-how__step-body">
+          <h3 class="ppc-how__step-title">Discovery Call</h3>
+          <p class="ppc-how__step-intro">Start off by hopping on a Zoom call with one of the Directors (James or Danny) where we'll&hellip;</p>
+          <ul class="ppc-how__list">
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Talk about your business to get an understanding of its USPs, products, services and your target audience.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Take a look at some numbers and explore how much you should reasonably expect to invest to acquire new leads &amp; customers.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Share some customised insights about your relevant search terms (keywords), search volumes, cost per click, buying intent, competitor's ads etc</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sense check your objectives &amp; budgets against Google's data to determine what needs to happen for any campaign to be a clear success and how much risk (if any) is likely to be involved.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Model a number of potential outcomes (best and worst case scenarios) to ensure that your advertising goals align with achievable results.</li>
+          </ul>
+          <p class="ppc-how__step-note">These Zoom discovery calls take about 30mins and we put a lot of effort into preparing for them in advance in order to give you as much quality info as possible so that you can make informed decisions.  There's never any obligation or expectation from us for you to do anything.  Either way, you'll come away from the call with a competitive advantage (<em>as well as the call recording and our proprietary keyword research</em>).</p>
+        </div>
+      </div>
+
+      <div class="ppc-how__step">
+        <div class="ppc-how__step-header">Step 2:</div>
+        <div class="ppc-how__step-body">
+          <h3 class="ppc-how__step-title">Onboarding &amp; Set-up</h3>
+          <p class="ppc-how__step-intro">If it makes clear business sense for you to try Google Ads with us, we'll get the ball rolling and&hellip;</p>
+          <ul class="ppc-how__list">
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Send your initial invoice to secure your slot, marking the formal start of our partnership.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Confirm objectives, budgets, and target locations.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>We'll review and if feasible improve your landing pages.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Analyse competitors to ensure we understand the competitive landscape.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Select the best campaign and bidding strategies to suit your business.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Get to work on building out engaging and effective ad creative, designed to capture attention and drive action.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>We'll assist with adding your billing details and getting you direct access to the Google Ads platform.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Get access to (or create if you don't have them) your Google Tag Manager, and Google Analytics accounts. This allows us to set up conversion tracking so we know what's happening after someone clicks an ad.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Install advanced call and form tracking, along with Hotjar, which provides us with deeper insights into user behaviour and campaign effectiveness.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>We'll handle any necessary account verification processes to ensure compliance and readiness.</li>
+          </ul>
+          <p class="ppc-how__step-note">This onboarding and setup process usually takes between 1 to 2 weeks, depending on the specific needs and complexity of your account.  Our goal is to ensure that everything is aligned perfectly with your objectives and that we give your account the best push off the side that we can.</p>
+        </div>
+      </div>
+
+      <div class="ppc-how__step">
+        <div class="ppc-how__step-header">Step 3:</div>
+        <div class="ppc-how__step-body">
+          <h3 class="ppc-how__step-title">Campaign Launch &amp; Monitoring</h3>
+          <p class="ppc-how__step-intro">As we launch your Google Ads campaigns, our attention turns to fine-tuning and performance monitoring:</p>
+          <ul class="ppc-how__list">
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>We begin real-time monitoring and adjustment to manage normal performance fluctuations effectively.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Regular updates are provided as necessary (ahead of moving onto more scheduled reporting), balancing informed communication with focused optimisation.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>In case of no or few impressions or clicks, we swiftly adjust bids, targeting, and ensure ad compliance to rectify any issues.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Budget management is key; we optimise spending, ensuring it aligns with search volumes and targeting strategies.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fluctuations in metrics like CPC (Cost Per Click) and CTR (Click Through Rate) are normal; our focus remains on achieving your strategic goals rather than chasing transient numbers.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Our approach is patient and data-driven, avoiding knee-jerk reactions to short-term trends to ensure long-term campaign success.</li>
+          </ul>
+          <p class="ppc-how__step-note">This phase is about establishing a solid foundation for your campaigns, with our team proactively managing and optimising every aspect to deliver the best possible results.</p>
+        </div>
+      </div>
+
+      <div class="ppc-how__step">
+        <div class="ppc-how__step-header">Step 4:</div>
+        <div class="ppc-how__step-body">
+          <h3 class="ppc-how__step-title">Monitor, Optimise &amp; Report</h3>
+          <p class="ppc-how__step-intro">This step encapsulates the vital ongoing management and optimisation of your Google Ads campaigns, where continuous improvement is our mantra:</p>
+          <ul class="ppc-how__list">
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>If eligible (<em>and so far all Google Ads 1st timers have been</em>) your &pound;400 ad credit get applied within the first 60 days.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Regular checks are a staple of our routine, including monitoring conversion actions, assessing quality scores, and evaluating Google's recommendations discerningly.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>We keep a close eye on search impression share and demographic performance, refining target audiences and adding negative keywords to enhance campaign relevance and efficiency.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Analysis of search term reports and audience responses informs our strategy, ensuring we're targeting the most responsive and valuable segments.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>We constantly evaluate the performance of ads, keywords, and landing pages, seeking out the top performers and optimising accordingly.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Listening to calls generated from ads and reviewing form submissions, we assess lead quality, providing insights into campaign effectiveness.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>HotJar data is scrutinised to understand user behaviour on your landing pages, revealing opportunities for further optimisation.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Proactively looking for opportunities, we test new campaigns, ads, and creative approaches to keep your strategy fresh and effective.</li>
+            <li><svg class="ppc-how__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Our reporting goes beyond automated numbers; we provide human insights and interpretations, explaining key metrics, our actions, future strategies, and the reasoning behind them.</li>
+          </ul>
+          <p class="ppc-how__step-note">In this stage, our goal is to not only maintain but elevate the performance of your campaigns, ensuring that every aspect is continuously refined for maximum impact and alignment with your evolving business objectives.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): Your Investment
+       ========================================================================== -->
+  <section class="ppc-invest reveal">
+    <div class="container">
+      <h2 class="ppc-invest__heading">Your Investment</h2>
+
+      <div class="ppc-invest__cards">
+        <div class="ppc-invest__card">
+          <img class="ppc-invest__icon" src="images/icons/ppc-invest/onboarding.svg" alt="">
+          <h3 class="ppc-invest__card-title">Onboarding &amp; Setup</h3>
+          <p class="ppc-invest__price">&pound;195</p>
+          <p class="ppc-invest__text">Kickstart your Google Ads journey swiftly and easily with our comprehensive setup package, including analytics, call, and form tracking, all for just &pound;195.</p>
+        </div>
+
+        <div class="ppc-invest__card">
+          <img class="ppc-invest__icon" src="images/icons/ppc-invest/handshake.svg" alt="">
+          <h3 class="ppc-invest__card-title">Ongoing Monthly Management</h3>
+          <p class="ppc-invest__price">&pound;395</p>
+          <p class="ppc-invest__text">Get our expert campaign management at &pound;395 per month for a Google Ad spend of up to &pound;1000. We charge an additional &pound;100 management fee per additional &pound;1000 spend with Google.</p>
+        </div>
+      </div>
+
+      <div class="ppc-invest__panel">
+        <p class="ppc-invest__intro">When considering Google Ads as part of your rhythmic acquisition of customers, it's essential to understand both the commitment and the investment required for success:</p>
+
+        <ul class="ppc-invest__list">
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Minimum Commitment:</strong> Our service requires a minimum commitment of 3 months, transitioning to a rolling monthly agreement thereafter. This duration allows us to effectively establish and optimise your campaigns for impactful results.</span></li>
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Cancellation Policy:</strong> You have the flexibility to cancel with 30 days notice. If cancellation occurs before the 3-month commitment is fulfilled, the offered discount is forfeited, and full payment for services to date becomes due.</span></li>
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Ad Spend Recommendation:</strong> To truly kickstart your campaign, we recommend an ad spend of at least &pound;500 per month or ideally more, in addition to our management fees. More clicks translate to more data and insights accelerating the learning and optimisation process. The specific costs per click and budget alignment will be discussed in detail during your discovery call.</span></li>
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Patience and Commitment:</strong> Immediate results are possible with Google Ads, but real, lasting impact grows over time. We advise a commitment to the process, allowing your account the time it needs to mature and improve.</span></li>
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Active Participation:</strong> Your input is invaluable. Regular feedback on lead quality and campaign impact helps us refine and enhance our strategies for your business.</span></li>
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Landing Page Enhancement:</strong> Be ready to invest in your landing pages, enhancing the user experience to maximise conversion rates. We're here to assist in this vital aspect of your campaign if you need us.</span></li>
+          <li><svg class="ppc-invest__check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 10.2L8.3 13L14.5 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Fee Structure and Potential Add-Ons:</strong> Our fees are proportional to your ad spend, with an additional &pound;100 charge for every extra &pound;1000 managed each month. For complex campaigns, additional services may be necessary, and we will always provide transparent cost communication upfront if that's the case.</span></li>
+        </ul>
+
+        <p class="ppc-invest__note">Investing in Google Ads with us is more than a financial decision &ndash; it's a partnership geared towards achieving your business goals. We're committed to guiding you through this journey with expertise, transparency, and a tailored approach to success.</p>
+
+        <div class="ppc-invest__buttons">
+          <a href="#contact" class="btn btn--gold">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Book a Call
+          </a>
+          <a href="#contact" class="btn btn--navy">Book a Google Ads Audit</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (PPC Management): Frequently Asked Questions
+       ========================================================================== -->
+  <section class="ppc-faq reveal">
+    <div class="container">
+      <h2 class="ppc-faq__heading">Frequently Asked Questions</h2>
+
+      <div class="ppc-faq__list">
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>How much does it cost to advertise with Google Ads?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>Advertising with Google Ads involves two primary costs: the management fee and the ad spend with Google.</p>
+            <ul>
+              <li>Management fee: &pound;0 setup fee (discounted from &pound;195) and &pound;197.50 for the first month (50% off the regular &pound;395/month).</li>
+              <li>Google ad spend: Recommended starting budget is &pound;500+ per month.</li>
+              <li>Costs can vary depending on the industry, competition, and campaign objectives.</li>
+              <li>The example given states that an investment of &pound;895/month at full price could generate approximately 413 clicks, based on an average CPC of &pound;1.21 at the time of writing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>How long does it take to see results?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>Immediate visibility can occur once campaigns go live. Meaningful optimisation and results typically start emerging within the first 3 months, depending on factors such as competition, ad spend, and the quality of the ads and landing pages.</p>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>What happens if it doesn't work?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>Google Ads involves some risk. The team uses historical Google data to estimate search volume, CPC, and conversion rates. If a campaign underperforms, they investigate factors such as CPC, search traffic, landing pages, ad copy, seasonal influences, and conversion tracking. They continuously test and improve campaigns and may recommend stopping a campaign if it is not meeting its objectives.</p>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>Do you offer any guarantees?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>There is no absolute guarantee of campaign success because performance depends on factors such as website quality, CPC, and industry competition. However, they guarantee a commitment to high-quality work, transparent reporting, and regular updates. Clients are also not tied to long-term contracts if they decide to discontinue the campaign.</p>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>What do you actually do on an ongoing basis?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>Ongoing Google Ads management includes:</p>
+            <ul>
+              <li>Bid management</li>
+              <li>Negative keyword management</li>
+              <li>Quality Score monitoring</li>
+              <li>A/B testing</li>
+              <li>Conversion tracking</li>
+              <li>Landing page optimisation</li>
+              <li>Competitor analysis</li>
+              <li>Budget management</li>
+              <li>Ad extension optimisation</li>
+              <li>Geo-targeting</li>
+              <li>Conversion review</li>
+              <li>Regular reporting</li>
+              <li>Ongoing monitoring and adjustments</li>
+              <li>Client communication</li>
+              <li>Internal team collaboration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>Can I run Google Ads myself with a Google rep?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>Yes, it is possible, but Google representatives generally provide broader platform guidance and basic troubleshooting rather than detailed campaign strategy. The content recommends experienced Google Ads professionals for ongoing management, data analysis, budget allocation, and optimisation.</p>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>How often will I get updates &amp; reports?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>You can expect regular monthly reports from the campaign manager, Lisa, including a detailed Loom video covering the month's activities and results. Weekly or ad-hoc updates are also available by email or phone during standard Monday-to-Friday working hours.</p>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>How long are your contracts and what happens if I want to cancel?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>The commitment is 3 months with a 1-month notice period. The service can be terminated within the 3-month period if the campaign isn't meeting expectations, while recognising that campaigns need time to optimise.</p>
+          </div>
+        </div>
+
+        <div class="ppc-faq__item">
+          <button class="ppc-faq__trigger" type="button" aria-expanded="false">
+            <span>Who will be running my campaign day to day?</span>
+            <span class="ppc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="ppc-faq__panel">
+            <p>The campaign is managed by a team of Google Ads certified professionals. Nick is the dedicated Google Ads technician responsible for daily monitoring, management, and optimisation. Lisa is the dedicated account manager and main point of contact for updates and reporting.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
   <!-- ==========================================================================
        GLOBAL: Footer

@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="images/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Homemade+Apple&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
   <!-- ==========================================================================
        GLOBAL: Header / Main Navigation
        ========================================================================== -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header site-header--overlay" id="siteHeader">
     <div class="site-header__inner">
       <a href="/" class="logo">
         <img class="logo__mark" src="images/brand/dgm-logo.png" alt="DGM">
@@ -57,15 +57,14 @@
               </ul>
             </div>
           </li>
-          <li class="has-dropdown">
+          <li class="has-dropdown is-active">
             <a href="/digital-marketing-services">Digital Marketing Services
               <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <div class="main-nav__dropdown">
               <ul class="main-nav__dropdown-menu">
                 <li><a href="/ppc-management">PPC Management</a></li>
-                <li><a href="#">Sales &amp; Marketing</a></li>
-                <li><a href="/sales-and-marketing-roadmap">Roadmap</a></li>
+                <li><a href="/sales-and-marketing-roadmap" aria-current="page">Sales &amp; Marketing Roadmap</a></li>
               </ul>
             </div>
           </li>
@@ -79,14 +78,468 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (Sales & Marketing Roadmap): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (Sales & Marketing Roadmap): Hero
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">Sales & Marketing Roadmap — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <h1 class="hero__heading">Sales &amp; Marketing<br><span class="text-accent">Roadmap</span></h1>
+          <p class="hero__text">Get a bespoke, actionable sales &amp; marketing plan, tailored to your business goals, giving you the clarity you need to accelerate growth, sales and revenue.</p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Register Interest</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/94z2bsg0y9bz6?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Sales & Marketing Roadmap): Chart your course intro
+       ========================================================================== -->
+  <section class="roadmap-intro reveal">
+    <div class="container roadmap-intro__inner">
+
+      <div class="roadmap-intro__content">
+        <h2 class="roadmap-intro__heading">Chart your course to success with a bespoke Sales &amp; Marketing Roadmap</h2>
+        <p>Imagine having one of our experts spend two full days with you, diving deep into your business, your goals, your competitors, and your customers through a series of targeted exercises and collaborative sessions. Within a week or so, you then receive an entirely custom-to-you action plan covering all the key activity areas &amp; priorities in practical terms along with the resources and guidance to get them done.</p>
+        <p>This is YOUR map to YOUR treasure</p>
+        <p class="roadmap-intro__signature">James &amp; Danny</p>
+      </div>
+
+      <div class="roadmap-intro__media">
+        <img src="images/sections/james-danny.png" alt="James and Danny, DGM's Sales &amp; Marketing Roadmap team, in yellow branded hoodies">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Sales & Marketing Roadmap): Why a Sales & Marketing Roadmap
+       ========================================================================== -->
+  <section class="roadmap-why reveal">
+    <div class="container">
+      <h2 class="roadmap-why__heading">Why a Sales &amp; Marketing Roadmap?</h2>
+
+      <div class="roadmap-why__grid">
+
+        <div class="roadmap-why__item">
+          <img class="roadmap-why__icon" src="images/icons/roadmap-why/bullseye-with-arrow.svg" alt="">
+          <h3 class="roadmap-why__title">Understand Your Business Goals &amp; Objectives</h3>
+          <p class="roadmap-why__text">Our process begins with a deep dive into your business to identify your key goals and objectives. By understanding what you aim to achieve, we tailor our roadmap to align perfectly with your vision, ensuring every step we take is designed to move you closer to your desired outcomes.</p>
+        </div>
+
+        <div class="roadmap-why__item">
+          <img class="roadmap-why__icon" src="images/icons/roadmap-why/strategy.svg" alt="">
+          <h3 class="roadmap-why__title">Get a Clear Plan of Action</h3>
+          <p class="roadmap-why__text">With our Sales &amp; Marketing Roadmap, you receive a comprehensive and detailed plan that outlines each action step required to achieve your goals. This plan provides clarity and direction, helping you to navigate the complex world of marketing with confidence and precision.</p>
+        </div>
+
+        <div class="roadmap-why__item">
+          <img class="roadmap-why__icon" src="images/icons/roadmap-why/teamwork.svg" alt="">
+          <h3 class="roadmap-why__title">Remove the Guesswork, Empower Your Team</h3>
+          <p class="roadmap-why__text">Say goodbye to trial and error. Our expertly crafted roadmap provides clear, evidence-based strategies and tactics, giving you and/or your marketing team the direction and confidence needed to focus on what works, saving time and resources while increasing effectiveness.</p>
+        </div>
+
+        <div class="roadmap-why__item">
+          <img class="roadmap-why__icon" src="images/icons/roadmap-why/resource-allocation.svg" alt="">
+          <h3 class="roadmap-why__title">Understand Where to Allocate Budget &amp; Resources</h3>
+          <p class="roadmap-why__text">Effective resource allocation is crucial for success. Our roadmap includes detailed guidance on where to allocate your budget and resources for maximum impact. This ensures that every pound spent is working towards driving your business forward, improving efficiency and return on investment.</p>
+        </div>
+
+        <div class="roadmap-why__item">
+          <img class="roadmap-why__icon" src="images/icons/roadmap-why/competitor-analysis-1.svg" alt="">
+          <h3 class="roadmap-why__title">Outmanoeuvre Your Competitors</h3>
+          <p class="roadmap-why__text">Gain a competitive edge with our in-depth analysis and strategic insights. Our roadmap not only highlights your strengths but also identifies opportunities to outmanoeuvre your competitors. With a tailored strategy in place, you can stay ahead in the market and achieve superior results.</p>
+        </div>
+
+        <div class="roadmap-why__item">
+          <img class="roadmap-why__icon" src="images/icons/roadmap-why/growth.svg" alt="">
+          <h3 class="roadmap-why__title">Increase Your Company Value</h3>
+          <p class="roadmap-why__text">A well-executed sales and marketing strategy can significantly enhance your company's value. Our roadmap helps you build a stronger brand, increase customer loyalty, and drive revenue growth. By positioning your business for long-term success, we help you boost your overall company value.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Sales & Marketing Roadmap): Does this sound familiar
+       ========================================================================== -->
+  <section class="roadmap-describes reveal">
+    <div class="container roadmap-describes__inner">
+
+      <div class="roadmap-describes__media">
+        <img class="roadmap-describes__photo" src="images/sections/road-map-what-describe-you.png" alt="Man pulling an unsure face, wondering where to start with sales &amp; marketing">
+      </div>
+
+      <div class="roadmap-describes__content">
+        <h2 class="roadmap-describes__heading">Does this sound familiar</h2>
+
+        <div class="accordion">
+          <div class="accordion__item is-active">
+            <button class="accordion__trigger" type="button" aria-expanded="true">
+              <span>I want to grow sales but I don&rsquo;t know where to start</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>You have ambitious goals for growth, but you&rsquo;re unsure how to align your sales and marketing strategies to achieve them.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span>I&rsquo;m overwhelmed by marketing choices</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>You&rsquo;re facing a sea of marketing tactics and strategies, but you&rsquo;re unsure which ones will truly benefit your business.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span>I don&rsquo;t have the right skills in-house</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>You recognise the need for advanced marketing strategies but lack the specialised skills within your team to develop and implement them effectively.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span>My marketing team needs direction</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>Your team is working hard, but without a clear plan, efforts often feel scattered and uncoordinated.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span>I&rsquo;m uncertain where to allocate budget</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>You&rsquo;re investing in marketing, but you&rsquo;re not confident you&rsquo;re spending your budget in the most effective areas.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span>My competitors are stealing my lunch</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>Your competitors seem to be one step ahead, and you&rsquo;re struggling to outmanoeuvre them in the market.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span>I need clarity and focus</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p>You want a clear, actionable plan that outlines exactly what steps to take to boost leads, sales, and revenue.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-describes__buttons">
+          <a href="#contact" class="btn btn--white">Register Interest</a>
+          <a href="#contact" class="btn btn--gold">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Something else? Book a Call
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: How Can We Help You (10 activity-area grid + CTA)
+       Reused verbatim, with page-specific heading/subheading/CTA.
+       ========================================================================== -->
+  <section class="help reveal">
+    <div class="container">
+      <h2 class="help__heading">What Areas Does the Roadmap Cover?</h2>
+      <p class="help__subheading">Below are the 10 key areas of activity that the Roadmap addresses, which are essential for any business looking to achieve sustained growth, stable revenue, and a consistent flow of qualified inbound sales enquiries.</p>
+
+      <div class="help__grid">
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/foundation.png" alt="Foundation">
+          <h3 class="help__title">Foundation</h3>
+          <p class="help__text">These are the fundamentals that if understood with clarity make everything else in sales &amp; marketing far easier &amp; more effective.</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/branding-identity.png" alt="Brand & Positioning">
+          <h3 class="help__title">Brand &amp; Positioning</h3>
+          <p class="help__text">This is about more than having a nice logo, this is about how people perceive your brand, your value proposition and where it fits in the marketplace.</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/web-design-development.png" alt="Website">
+          <h3 class="help__title">Website</h3>
+          <p class="help__text">The hub of most of your sales &amp; marketing activity &amp; the primary source of information for your prospects. Your website should be your best salesperson.</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/search-engine-marketing.png" alt="Search & AI Discoverability">
+          <h3 class="help__title">Search &amp; AI Discoverability</h3>
+          <p class="help__text">This is about understanding the opportunities that exist on the search engines &amp; AI platforms. Can people find you when searching for a solution to their problem or need?</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/content-marketing.png" alt="Content Marketing">
+          <h3 class="help__title">Content Marketing</h3>
+          <p class="help__text">How effectively or strategically are you using video, images, audio &amp; text to become the trusted thought leader in your market?</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/email-marketing.png" alt="Email">
+          <h3 class="help__title">Email</h3>
+          <p class="help__text">We all send &amp; receive email, some more effectively than others. This relatively low cost tool enables you to automate and scale the delivery of your value proposition to the right people at the right time.</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/social-media.png" alt="Social Media">
+          <h3 class="help__title">Social Media</h3>
+          <p class="help__text">Whatever your personal preferences, most of your customers are using some combination of Facebook, Instagram, TikTok, LinkedIn &amp; Twitter etc. Are you part of the conversation?</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/offline-marketing.png" alt="Offline">
+          <h3 class="help__title">Offline</h3>
+          <p class="help__text">How effectively are you using time tested traditional sales &amp; marketing methods to generate leads &amp; sales?</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/insights-analytics.png" alt="Insights & Analytics">
+          <h3 class="help__title">Insights &amp; Analytics</h3>
+          <p class="help__text">What gets measured gets improved. Tangible success is difficult to replicate or scale unless you measure and improve on how it occurs in the first place.</p>
+        </div>
+
+        <div class="help__item">
+          <img class="help__icon" src="images/icons/coaching-consultancy.png" alt="Systems, Tools & Support">
+          <h3 class="help__title">Systems, Tools &amp; Support</h3>
+          <p class="help__text">How effectively are you leveraging software tools, and expertise from outside of your business to improve sales &amp; marketing?</p>
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn--gold help__cta">
+        Take the sales &amp; marketing assessment now
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Recent Work
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="portfolio reveal">
+    <div class="portfolio__grid">
+
+      <div class="portfolio-text portfolio-text--intro">
+        <h2 class="portfolio-text__heading">RECENT<br>WORK</h2>
+        <a href="/success-stories" class="portfolio-text__link">View Success Stories</a>
+      </div>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/uk-electrical-installations.png" alt="UK Electrical Installations">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">UK Electrical Installations</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/sonic-solutions.jpg" alt="Sonic Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Sonic Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/blocc-interiors.jpg" alt="BLOCC Interiors">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">BLOCC Interiors</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/everquip.png" alt="Everquip">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Everquip</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/duomo-uk.png" alt="Duomo UK">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Duomo UK</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/qutec.png" alt="QuTec">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">QuTec</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/cd-southwest.png" alt="C&amp;D South West">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">C&amp;D South West</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/gainmore-solutions.png" alt="GainMore Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">GainMore Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <div class="portfolio-text portfolio-text--outro">
+        <h2 class="portfolio-text__heading">YOU<br>NEXT?</h2>
+        <a href="#contact" class="portfolio-text__link">Get in Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Client Testimonials
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="testimonials reveal">
+    <div class="container">
+      <h2 class="testimonials__heading">What Our Clients Say About Us</h2>
+
+      <div class="testimonials__grid">
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rhmNgWd2NWI" title="Gurdip.co.uk Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/h7kqboepz2E" title="Sonic Solutions Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rcXlBKi2MAc" title="Beaumont TM Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/4m2zeAK1ZBc" title="room44 Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a href="/success-stories" class="btn btn--gold testimonials__cta">See More Success Stories</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Let's Have a Chat
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="chat-cta reveal">
+    <div class="chat-cta__decor" aria-hidden="true">
+      <img class="chat-cta__blob chat-cta__blob--1" src="images/sections/chat-cta-blob-1.png" alt="">
+      <img class="chat-cta__blob chat-cta__blob--2" src="images/sections/chat-cta-blob-2.png" alt="">
+      <img class="chat-cta__photo" src="images/sections/chat-cta-photo.png" alt="Two DGM team members in yellow branded hoodies">
+    </div>
+
+    <div class="container chat-cta__inner">
+      <div class="chat-cta__spacer" aria-hidden="true"></div>
+      <div class="chat-cta__content">
+        <h2 class="chat-cta__heading">Let&rsquo;s Have a Chat</h2>
+        <p class="chat-cta__text">Click the button below to find a free slot in our calendar to discuss how we can help you achieve your sales &amp; marketing goals.<br>Or call our office on <strong>0121 224 7412</strong></p>
+        <a href="#contact" class="btn btn--gold chat-cta__cta">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Schedule a Zoom call
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================================
        GLOBAL: Footer

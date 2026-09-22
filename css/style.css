@@ -61,7 +61,7 @@ select {
 }
 
 :root {
-  --color-pink: #E4004E;
+  --color-pink: #D60262;
   --color-pink-deep: #C2004A;
   --color-orange: #FF7A1A;
   --color-orange-light: #FFA22C;
@@ -88,6 +88,16 @@ body {
 @media (max-width: 980px) {
   .container {
     max-width: 90%;
+  }
+}
+
+/* ==========================================================================
+   Global: Headings
+   ========================================================================== */
+
+@media (min-width: 981px) {
+  h2 {
+    font-size: 2.29vw !important;
   }
 }
 
@@ -710,6 +720,11 @@ body {
 .btn--white {
   background: #fff;
   color: var(--color-pink);
+}
+
+.btn--navy {
+  background: var(--color-navy);
+  color: #fff;
 }
 
 .hero__badges {
@@ -2007,7 +2022,7 @@ body {
   margin: 0;
   line-height: 0;
   border-radius: 50%;
-  background: rgba(228, 0, 78, 0.25);
+  background: rgba(214, 2, 98, 0.25);
   transition: background-color 0.2s ease;
 }
 
@@ -2552,6 +2567,839 @@ body {
 @media (max-width: 560px) {
   .dm-tools__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): PPC agency intro
+   ========================================================================== */
+
+.ppc-intro {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.ppc-intro__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+.ppc-intro__heading {
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #D60262;
+  margin-bottom: 20px;
+}
+
+.ppc-intro__content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ppc-intro__content .ppc-intro__signature {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 32px;
+  text-align: right;
+  color: var(--color-dark-text);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.ppc-intro__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+  .ppc-intro__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): Why Google Ads
+   ========================================================================== */
+
+.why-ads {
+  background: #F5F5F6;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.why-ads__heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.why-ads__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 4vw, 60px);
+}
+
+.why-ads__icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+.why-ads__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 12px;
+}
+
+.why-ads__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .why-ads__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-ads__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): Who's This Ideal For
+   ========================================================================== */
+
+.ppc-ideal {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.ppc-ideal__heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.ppc-ideal__heading .text-accent {
+  color: var(--color-pink);
+}
+
+.ppc-ideal__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 4vw, 60px);
+}
+
+.ppc-ideal__item {
+  display: flex;
+  gap: 14px;
+}
+
+.ppc-ideal__check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 4px;
+  color: var(--color-navy);
+}
+
+.ppc-ideal__title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-pink);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.ppc-ideal__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .ppc-ideal__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ppc-ideal__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): Who This Is NOT For
+   ========================================================================== */
+
+.ppc-not-ideal {
+  background: var(--color-navy);
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.ppc-not-ideal__heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.ppc-not-ideal__heading .text-accent {
+  color: var(--color-orange);
+}
+
+.ppc-not-ideal__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 4vw, 60px);
+}
+
+.ppc-not-ideal__item {
+  display: flex;
+  gap: 14px;
+}
+
+.ppc-not-ideal__cross {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  color: var(--color-orange);
+}
+
+.ppc-not-ideal__title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-gold);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.ppc-not-ideal__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+  .ppc-not-ideal__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ppc-not-ideal__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): Why Work With Us
+   ========================================================================== */
+
+.ppc-why {
+  background: #F5F5F6;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.ppc-why__heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.ppc-why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 4vw, 60px);
+}
+
+.ppc-why__icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  color: var(--color-pink);
+}
+
+.ppc-why__title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-pink);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.ppc-why__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+}
+
+.ppc-why__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .ppc-why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ppc-why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): How it works
+   ========================================================================== */
+
+.ppc-how {
+  background: #F5F5F6;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.ppc-how__heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(40px, 6vw, 56px);
+}
+
+.ppc-how__step {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(33, 28, 69, 0.08);
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.ppc-how__step:last-child {
+  margin-bottom: 0;
+}
+
+.ppc-how__step-header {
+  background: var(--color-navy);
+  color: #ffffff;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 800;
+  padding: 18px clamp(20px, 4vw, 40px);
+}
+
+.ppc-how__step-body {
+  background: #ffffff;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.ppc-how__step-title {
+  font-size: clamp(19px, 2.2vw, 22px);
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 6px;
+}
+
+.ppc-how__step-intro {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-navy);
+  margin-bottom: 18px;
+}
+
+.ppc-how__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-navy);
+  margin-bottom: 14px;
+}
+
+.ppc-how__list li:last-child {
+  margin-bottom: 18px;
+}
+
+.ppc-how__check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: #43A047;
+}
+
+.ppc-how__list em,
+.ppc-how__step-note em {
+  font-style: italic;
+}
+
+.ppc-how__step-note {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #333;
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): Your Investment
+   ========================================================================== */
+
+.ppc-invest {
+  background-image: linear-gradient(90deg, #d60262 0%, #ff8500 100%);
+  padding: clamp(60px, 8vw, 90px) 0;
+}
+
+.ppc-invest__heading {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: clamp(32px, 4vw, 44px);
+}
+
+.ppc-invest__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.ppc-invest__card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: clamp(28px, 3vw, 36px);
+  text-align: center;
+}
+
+.ppc-invest__icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  color: var(--color-pink);
+}
+
+.ppc-invest__card-title {
+  font-weight: 800;
+  color: var(--color-navy);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.ppc-invest__price {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 14px;
+}
+
+.ppc-invest__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.ppc-invest__panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: clamp(28px, 4vw, 40px);
+}
+
+.ppc-invest__intro {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.ppc-invest__list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--color-dark-text);
+  margin-bottom: 14px;
+}
+
+.ppc-invest__check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  color: #43A047;
+}
+
+.ppc-invest__list strong {
+  font-weight: 700;
+}
+
+.ppc-invest__note {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--color-pink);
+  margin: 10px 0 24px;
+}
+
+.ppc-invest__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .ppc-invest__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (PPC Management): Frequently Asked Questions
+   ========================================================================== */
+
+.ppc-faq {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.ppc-faq__heading {
+  text-align: center;
+  font-size: clamp(26px, 3.2vw, 34px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.ppc-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ppc-faq__item {
+  background: var(--color-pink);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(33, 28, 69, 0.12);
+  overflow: hidden;
+}
+
+.ppc-faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 24px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.ppc-faq__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.ppc-faq__icon::before,
+.ppc-faq__icon::after {
+  content: '';
+  position: absolute;
+  background: var(--color-pink);
+  border-radius: 2px;
+}
+
+.ppc-faq__icon::before {
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.ppc-faq__icon::after {
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+
+.ppc-faq__item.is-active .ppc-faq__icon::after {
+  opacity: 0;
+}
+
+.ppc-faq__panel {
+  max-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 0 24px;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.ppc-faq__item.is-active .ppc-faq__panel {
+  max-height: 1000px;
+  padding: 20px 24px 22px;
+}
+
+.ppc-faq__panel p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.ppc-faq__panel p:last-child {
+  margin-bottom: 0;
+}
+
+.ppc-faq__panel ul {
+  margin-bottom: 12px;
+}
+
+.ppc-faq__panel ul:last-child {
+  margin-bottom: 0;
+}
+
+.ppc-faq__panel li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.ppc-faq__panel li::before {
+  content: '\2022';
+  position: absolute;
+  left: 2px;
+  color: var(--color-pink);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Page-specific (Sales & Marketing Roadmap): Chart your course intro
+   ========================================================================== */
+
+.roadmap-intro {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0 0;
+  overflow: hidden;
+}
+
+.roadmap-intro__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 480px) 1fr;
+  gap: clamp(16px, 2.5vw, 32px);
+  align-items: flex-end;
+}
+
+.roadmap-intro__content {
+  padding-bottom: clamp(40px, 6vw, 80px);
+}
+
+.roadmap-intro__heading {
+  font-size: clamp(26px, 3.2vw, 34px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-pink);
+  margin-bottom: 20px;
+}
+
+.roadmap-intro__content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.roadmap-intro__content .roadmap-intro__signature {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 32px;
+  color: var(--color-dark-text);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.roadmap-intro__media img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 901px) {
+  .roadmap-intro .container {
+    max-width: min(70vw, 1200px);
+  }
+}
+
+@media (max-width: 900px) {
+  .roadmap-intro__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .roadmap-intro__content {
+    text-align: center;
+  }
+
+  .roadmap-intro__media {
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Sales & Marketing Roadmap): Why a Roadmap
+   ========================================================================== */
+
+.roadmap-why {
+  background: #F5F5F6;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.roadmap-why__heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(40px, 6vw, 56px);
+}
+
+.roadmap-why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 4vw, 60px);
+}
+
+.roadmap-why__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.roadmap-why__title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-pink);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.roadmap-why__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .roadmap-why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .roadmap-why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Sales & Marketing Roadmap): Does this sound familiar
+   ========================================================================== */
+
+.roadmap-describes {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.roadmap-describes__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 500px) 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+.roadmap-describes__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 718 / 695;
+}
+
+.roadmap-describes__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.roadmap-describes__heading {
+  font-size: clamp(24px, 4.2vw, 36px);
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 32px;
+}
+
+.roadmap-describes__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.roadmap-describes__buttons .btn--white {
+  border: 1.5px solid var(--color-pink);
+}
+
+@media (max-width: 900px) {
+  .roadmap-describes__inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .roadmap-describes__media {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .roadmap-describes__heading {
+    text-align: center;
+  }
+
+  .roadmap-describes__buttons {
+    justify-content: center;
   }
 }
 

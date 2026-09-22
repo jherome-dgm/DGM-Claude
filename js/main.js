@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initHeroTypewriter();
   initAccordion();
+  initFaqAccordion();
   initBackToTop();
   initWhySlider();
   initShowcaseSlider();
@@ -8,6 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initMobileNav();
 });
+
+function initFaqAccordion() {
+  const items = document.querySelectorAll('.ppc-faq__item');
+  if (!items.length) return;
+
+  items.forEach((item) => {
+    const trigger = item.querySelector('.ppc-faq__trigger');
+
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('is-active');
+
+      items.forEach((other) => {
+        other.classList.remove('is-active');
+        other.querySelector('.ppc-faq__trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        item.classList.add('is-active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
 
 function initShowcaseSlider() {
   const track = document.getElementById('showcaseTrack');
