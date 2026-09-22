@@ -67,6 +67,7 @@ select {
   --color-orange-light: #FFA22C;
   --color-gold: #FFC629;
   --color-navy: #211C45;
+  --color-teal: #14A6B8;
   --color-dark-text: #1A1A2E;
   --font-primary: 'Poppins', 'Segoe UI', sans-serif;
   --container-width: min(86.458vw, 1736px);
@@ -80,8 +81,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 90%;
+  max-width: var(--container-width);
   margin: 0 auto;
+}
+
+@media (max-width: 980px) {
+  .container {
+    max-width: 90%;
+  }
 }
 
 /* ==========================================================================
@@ -157,6 +164,11 @@ body {
   padding: 12px clamp(14px, 3vw, 32px);
   white-space: nowrap;
   text-align: center;
+  transition: background-color 0.25s ease;
+}
+
+.topbar__cta:hover {
+  background: var(--color-pink);
 }
 
 @media (max-width: 640px) {
@@ -269,6 +281,7 @@ body {
 }
 
 .main-nav a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -276,6 +289,24 @@ body {
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
+}
+
+.main-nav > ul > li > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.main-nav > ul > li > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .main-nav__home svg {
@@ -333,6 +364,12 @@ body {
   font-size: 15px;
   font-weight: 700;
   white-space: nowrap;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.main-nav__dropdown-menu a:hover {
+  color: var(--color-pink-deep);
+  transform: translateX(4px);
 }
 
 /* ---- Mobile / tablet nav: hamburger + slide-down panel ---- */
@@ -504,8 +541,14 @@ body {
   grid-template-columns: minmax(0, 560px) 1fr;
   gap: clamp(28px, 4vw, 60px);
   align-items: center;
-  max-width: 90%;
+  max-width: var(--container-width);
   margin: 0 auto;
+}
+
+@media (max-width: 980px) {
+  .hero__inner {
+    max-width: 90%;
+  }
 }
 
 .hero__eyebrow {
@@ -627,6 +670,12 @@ body {
   border-radius: 999px;
   white-space: nowrap;
   text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(33, 28, 69, 0.22);
 }
 
 @media (max-width: 480px) {
@@ -1820,6 +1869,466 @@ body {
     grid-template-columns: 1fr;
     gap: 44px;
     padding: 56px 0 48px;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Web Design): Showcase ("Web Design Company")
+   ========================================================================== */
+
+.showcase {
+  padding: clamp(60px, 8vw, 110px) 0;
+  background: #ffffff;
+}
+
+.showcase__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 460px) 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+.showcase__heading {
+  font-size: clamp(28px, 4.2vw, 40px);
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 24px;
+}
+
+.showcase__content p {
+  font-size: clamp(15px, 1.6vw, 16px);
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.showcase__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.showcase__slider {
+  position: relative;
+}
+
+.showcase__slides {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1266 / 611;
+  overflow: hidden;
+}
+
+.showcase__track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.showcase__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.showcase__arrow {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--color-pink);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.showcase__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase__arrow--prev {
+  left: clamp(-8px, -2vw, 0px);
+}
+
+.showcase__arrow--next {
+  right: clamp(-8px, -2vw, 0px);
+}
+
+.showcase__arrow:hover {
+  color: var(--color-pink-deep);
+}
+
+.showcase__arrow--prev:hover {
+  transform: translateY(-50%) translateX(-4px);
+}
+
+.showcase__arrow--next:hover {
+  transform: translateY(-50%) translateX(4px);
+}
+
+.showcase__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.showcase__dot {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  border-radius: 50%;
+  background: rgba(228, 0, 78, 0.25);
+  transition: background-color 0.2s ease;
+}
+
+.showcase__dot.is-active {
+  background: var(--color-pink);
+}
+
+@media (max-width: 900px) {
+  .showcase__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase__arrow {
+    top: 40%;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Web Design): Pricing / Web Design Packages
+   ========================================================================== */
+
+.pricing {
+  background: #F6F5F9;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.pricing__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.pricing__intro-col h2 {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 16px;
+}
+
+.pricing__intro-col p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.pricing__lead,
+.pricing__link {
+  color: var(--color-pink);
+  font-weight: 700;
+}
+
+.pricing__card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(33, 28, 69, 0.08);
+  overflow: hidden;
+}
+
+.pricing-plan {
+  position: relative;
+  padding: clamp(32px, 4vw, 48px) clamp(22px, 3vw, 32px);
+  text-align: center;
+}
+
+.pricing-plan + .pricing-plan {
+  border-left: 1px solid #ECECF2;
+}
+
+.pricing-plan__icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+}
+
+.pricing-plan__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 16px;
+}
+
+.pricing-plan__desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.pricing-plan__list {
+  border-top: 1px solid #ECECF2;
+}
+
+.pricing-plan__list li {
+  padding: 14px 4px;
+  border-bottom: 1px solid #ECECF2;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pricing-plan__list li:nth-child(odd) {
+  color: var(--color-pink);
+}
+
+.pricing-plan__list li:nth-child(even) {
+  color: var(--color-navy);
+}
+
+.pricing-plan__list li.pricing-plan__item--highlight {
+  color: var(--color-orange);
+}
+
+.pricing-plan__ribbon {
+  position: absolute;
+  top: 22px;
+  right: -46px;
+  width: 170px;
+  padding: 6px 0;
+  background: var(--color-pink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.pricing__footer {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.pricing__footer p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 760px;
+  margin: 0 auto 8px;
+}
+
+@media (max-width: 900px) {
+  .pricing__intro {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .pricing__card {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-plan + .pricing-plan {
+    border-left: none;
+    border-top: 1px solid #ECECF2;
+  }
+
+  .pricing-plan__ribbon {
+    top: 16px;
+    right: -42px;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Support): WordPress Maintenance & Support Agency intro
+   ========================================================================== */
+
+.maint-intro {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0 0;
+  overflow: hidden;
+}
+
+.maint-intro__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 480px) 1fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: flex-end;
+}
+
+.maint-intro__heading {
+  font-size: clamp(28px, 3.6vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-pink);
+  margin-bottom: 24px;
+}
+
+.maint-intro__content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.maint-intro__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.maint-intro__media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.maint-intro__media img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .maint-intro__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .maint-intro__content {
+    text-align: center;
+  }
+
+  .maint-intro__buttons {
+    justify-content: center;
+  }
+
+  .maint-intro__media {
+    justify-content: center;
+  }
+
+  .maint-intro__media img {
+    max-width: 320px;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Support): What's Included / Unlimited Site Tasks
+   Visually enhanced per explicit request (cards, check icons, hover states) —
+   this treatment is scoped to this section only, not a sitewide pattern.
+   ========================================================================== */
+
+.included {
+  background: #F2F1F6;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.included__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) 1fr;
+  gap: clamp(20px, 3vw, 32px);
+  align-items: start;
+}
+
+.included__card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(33, 28, 69, 0.06);
+  padding: clamp(28px, 3.5vw, 40px);
+}
+
+.included__heading {
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-pink);
+  margin-bottom: 24px;
+}
+
+.included__heading .text-accent {
+  color: var(--color-pink);
+}
+
+.included__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 1.4;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.included__list li:hover {
+  background: #F2F1F6;
+  transform: translateX(2px);
+}
+
+.included__check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.included__list--teal li {
+  color: var(--color-teal);
+}
+
+.included__list--tasks {
+  column-count: 3;
+  column-gap: clamp(20px, 3vw, 40px);
+}
+
+.included__list--tasks li {
+  break-inside: avoid;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-navy);
+}
+
+.included__list--tasks li:nth-child(odd) {
+  color: var(--color-pink);
+}
+
+@media (max-width: 900px) {
+  .included__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .included__list--tasks {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .included__list--tasks {
+    column-count: 1;
   }
 }
 

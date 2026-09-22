@@ -33,7 +33,7 @@
   <!-- ==========================================================================
        GLOBAL: Header / Main Navigation
        ========================================================================== -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header site-header--overlay" id="siteHeader">
     <div class="site-header__inner">
       <a href="index.html" class="logo">
         <img class="logo__mark" src="images/brand/dgm-logo.png" alt="DGM">
@@ -44,14 +44,14 @@
           <li><a href="index.html" class="main-nav__home" aria-label="Home">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11L12 4L20 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9.5V19C6 19.55 6.45 20 7 20H10C10.55 20 11 19.55 11 19V15C11 14.45 11.45 14 12 14H12C12.55 14 13 14.45 13 15V19C13 19.55 13.45 20 14 20H17C17.55 20 18 19.55 18 19V9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a></li>
-          <li class="has-dropdown">
+          <li class="has-dropdown is-active">
             <a href="web-design.html">Web Design
               <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <div class="main-nav__dropdown">
               <ul class="main-nav__dropdown-menu">
-                <li><a href="#">Website Development</a></li>
-                <li><a href="support.html">WordPress Support</a></li>
+                <li><a href="web-design.html">Website Development</a></li>
+                <li><a href="support.html" aria-current="page">WordPress Support</a></li>
               </ul>
             </div>
           </li>
@@ -77,14 +77,331 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (Support): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (Support): Hero
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">Support — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Award Winning WordPress Support</p>
+          <h1 class="hero__heading">Unlimited WordPress Website Support Services Hosting, Support &amp; Maintenance &ndash; <span class="text-accent">&pound;99pm</span></h1>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Request a Free Expert Review</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/xsi5a3e7ao5n1?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Support): WordPress Maintenance & Support Agency intro
+       ========================================================================== -->
+  <section class="maint-intro reveal">
+    <div class="container maint-intro__inner">
+
+      <div class="maint-intro__content">
+        <h2 class="maint-intro__heading">WordPress Maintenance &amp; Support Agency</h2>
+        <p>The purpose of our website support service is to ensure peace of mind and to help you make the most of your investment to have a website in the first place. At a fundamental level you will be able to enjoy the fact that behind the scenes we're pro-actively monitoring, securing and updating your website for you.</p>
+        <p>Further more with your input we can continually add fresh content and optimise performance which will ensure that your website continues to perform well for you and your users. By monitoring your site, measuring performance on a regular basis, together we can ensure that your website continues to stay aligned with your business goals.</p>
+
+        <div class="maint-intro__buttons">
+          <a href="#" class="btn btn--gold">See What's Included</a>
+          <a href="#contact" class="btn btn--gold">Let's Talk</a>
+        </div>
+      </div>
+
+      <div class="maint-intro__media">
+        <img src="images/sections/james-danny.png" alt="James and Danny, DGM's WordPress support team, in yellow branded hoodies">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Support): What's Included / Unlimited Site Tasks
+       (visually enhanced per explicit request — cards, check icons, hover states)
+       ========================================================================== -->
+  <section class="included reveal">
+    <div class="container included__inner">
+
+      <div class="included__card included__card--included">
+        <h2 class="included__heading">What's Included for Your <span class="text-accent">&pound;99pm&hellip;</span></h2>
+        <ul class="included__list included__list--teal">
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited Site Tasks</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited Content Updates</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Twice Daily Backups</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>SSL Certificate</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Task Management &amp; Monitoring Dashboard</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Vulnerability Scanning</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Uptime Monitoring</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Managed Plugin, Theme &amp; WordPress Updates</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Bug Fixes and Enhancements</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Minor HTML &amp; CSS Design Tweaks</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>World Class Web Hosting</li>
+        </ul>
+      </div>
+
+      <div class="included__card included__card--tasks">
+        <h2 class="included__heading">Unlimited Site Tasks include:</h2>
+        <ul class="included__list included__list--tasks">
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>(Re)Install WordPress</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix Configuration File</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Optimise/Clean Up Hosting</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Activate SSL</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix Connectivity Issue</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Reset Admin Passwords</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Add 3rd Party Code</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix Contact Form Errors</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Restore a Site</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Add Cloudflare</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix Dead Links</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Restrict Website Access</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Add/Edit Website Content</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix Media Upload Errors</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up Backups</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit DNS</li>
+
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix plugin Errors</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up Cron Jobs</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit Hosting</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fix White Screen of Death</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up Custom Nameservers</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Change Site Domain</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Force SSL</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up Emails</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Configure DNS</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Install a Plugin</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up WordPress SSL</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Configure Hosting</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Install Demo Content</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Transfer Domain Between Providers</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Configure MX records</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Install Disqus</li>
+
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Update CSS</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Configure Redirects</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Install Theme</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Update PHP Settings</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Create an SPF record</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Manage Domains</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Update Plugins</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Create FTP Accounts</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Migrate Database</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Update WordPress</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Database Administration</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>On Demand Backups</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Website Migration</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Diagnose Internal Server Errors</li>
+          <li><svg class="included__check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" fill="currentColor" fill-opacity="0.12"/><path d="M5 8.2L7 10.2L11 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Optimise for SEO</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Client Testimonials
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="testimonials reveal">
+    <div class="container">
+      <h2 class="testimonials__heading">What Our Clients Say About Us</h2>
+
+      <div class="testimonials__grid">
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rhmNgWd2NWI" title="Gurdip.co.uk Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/h7kqboepz2E" title="Sonic Solutions Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rcXlBKi2MAc" title="Beaumont TM Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/4m2zeAK1ZBc" title="room44 Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a href="success-stories.html" class="btn btn--gold testimonials__cta">See More Success Stories</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Trusted By
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="trusted reveal">
+    <div class="container">
+      <h2 class="trusted__heading">Trusted by</h2>
+    </div>
+
+    <div class="trusted__marquee">
+      <div class="trusted__track">
+        <div class="trusted__group">
+          <img src="images/trusted-logos/accurate-laser-log-1.png" alt="Accurate Laser">
+          <img src="images/trusted-logos/APC-Logo-2019-Copy-1.png" alt="APC">
+          <img src="images/trusted-logos/appliedpumps-logo-1.png" alt="Applied Pumps">
+          <img src="images/trusted-logos/Beaumont-Logo-white-text.png" alt="Beaumont">
+          <img src="images/trusted-logos/Blocc-Interiors-Logo.png" alt="Blocc Interiors">
+          <img src="images/trusted-logos/cd.png" alt="CD">
+          <img src="images/trusted-logos/Duomo-UK-1-1.png" alt="Duomo UK">
+          <img src="images/trusted-logos/EasyTots-Logo-MASTER-Colour-1.png" alt="EasyTots">
+          <img src="images/trusted-logos/face-envy-1.png" alt="Face Envy">
+          <img src="images/trusted-logos/gainmore-logo.png" alt="Gainmore">
+          <img src="images/trusted-logos/kitchen-doors-worktops-logo-1.png" alt="Kitchen Doors &amp; Worktops">
+          <img src="images/trusted-logos/logo-Mr-Tariq-Miskry-v3-1.png" alt="Mr Tariq Miskry">
+          <img src="images/trusted-logos/logoQT-inverted-colors-v3-1.png" alt="QT">
+          <img src="images/trusted-logos/psa-uk-logo-1.png" alt="PSA UK">
+          <img src="images/trusted-logos/Raptor-Logo_Colour-1.png" alt="Raptor">
+          <img src="images/trusted-logos/Sonic-Solutions-Industrial-Parts-Cleaning-1.png" alt="Sonic Solutions">
+          <img src="images/trusted-logos/UK-Electrical-Instalaltions-1.png" alt="UK Electrical Installations">
+          <img src="images/trusted-logos/woodwool-uk-logo-1.png" alt="Woodwool UK">
+          <img src="images/trusted-logos/WRT-Logo-2020-1.png" alt="WRT">
+          <img src="images/trusted-logos/everquip-logo-version-2.png" alt="Everquip">
+        </div>
+        <div class="trusted__group" aria-hidden="true">
+          <img src="images/trusted-logos/accurate-laser-log-1.png" alt="">
+          <img src="images/trusted-logos/APC-Logo-2019-Copy-1.png" alt="">
+          <img src="images/trusted-logos/appliedpumps-logo-1.png" alt="">
+          <img src="images/trusted-logos/Beaumont-Logo-white-text.png" alt="">
+          <img src="images/trusted-logos/Blocc-Interiors-Logo.png" alt="">
+          <img src="images/trusted-logos/cd.png" alt="">
+          <img src="images/trusted-logos/Duomo-UK-1-1.png" alt="">
+          <img src="images/trusted-logos/EasyTots-Logo-MASTER-Colour-1.png" alt="">
+          <img src="images/trusted-logos/face-envy-1.png" alt="">
+          <img src="images/trusted-logos/gainmore-logo.png" alt="">
+          <img src="images/trusted-logos/kitchen-doors-worktops-logo-1.png" alt="">
+          <img src="images/trusted-logos/logo-Mr-Tariq-Miskry-v3-1.png" alt="">
+          <img src="images/trusted-logos/logoQT-inverted-colors-v3-1.png" alt="">
+          <img src="images/trusted-logos/psa-uk-logo-1.png" alt="">
+          <img src="images/trusted-logos/Raptor-Logo_Colour-1.png" alt="">
+          <img src="images/trusted-logos/Sonic-Solutions-Industrial-Parts-Cleaning-1.png" alt="">
+          <img src="images/trusted-logos/UK-Electrical-Instalaltions-1.png" alt="">
+          <img src="images/trusted-logos/woodwool-uk-logo-1.png" alt="">
+          <img src="images/trusted-logos/WRT-Logo-2020-1.png" alt="">
+          <img src="images/trusted-logos/everquip-logo-version-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Support): SME Sales & Marketing Health Check CTA
+       ========================================================================== -->
+  <section class="reality reveal">
+    <div class="container">
+      <div class="reality__card">
+        <span class="reality__blob" aria-hidden="true"></span>
+
+        <div class="reality__content">
+          <h2 class="reality__heading">Take The SME Sales &amp; Marketing Health Check</h2>
+          <p class="reality__text">It takes most people less than 6 minutes to take our quiz which will give you a rapid yet accurate benchmark of your Sales &amp; Marketing effectiveness, and then instantly provide you with tailored and actionable insights to help you see your best ever results over the next 12 months.</p>
+          <a href="#contact" class="btn btn--gold">Start Your Health Check Now</a>
+        </div>
+
+        <div class="reality__media">
+          <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+            <iframe id="tolstoy" src="https://player.gotolstoy.com/655bwviilm8qu?host"
+                    style="width:100%;height:100%;max-width:100%"
+                    scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+            </iframe>
+            <script src="https://widget.gotolstoy.com/script.js" defer></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Let's Have a Chat
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="chat-cta reveal">
+    <div class="chat-cta__decor" aria-hidden="true">
+      <img class="chat-cta__blob chat-cta__blob--1" src="images/sections/chat-cta-blob-1.png" alt="">
+      <img class="chat-cta__blob chat-cta__blob--2" src="images/sections/chat-cta-blob-2.png" alt="">
+      <img class="chat-cta__photo" src="images/sections/chat-cta-photo.png" alt="Two DGM team members in yellow branded hoodies">
+    </div>
+
+    <div class="container chat-cta__inner">
+      <div class="chat-cta__spacer" aria-hidden="true"></div>
+      <div class="chat-cta__content">
+        <h2 class="chat-cta__heading">Let&rsquo;s Have a Chat</h2>
+        <p class="chat-cta__text">Click the button below to find a free slot in our calendar to discuss how we can help you achieve your sales &amp; marketing goals.<br>Or call our office on <strong>0121 224 7412</strong></p>
+        <a href="#contact" class="btn btn--gold chat-cta__cta">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Schedule a Zoom call
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================================
        GLOBAL: Footer

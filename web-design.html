@@ -33,7 +33,7 @@
   <!-- ==========================================================================
        GLOBAL: Header / Main Navigation
        ========================================================================== -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header site-header--overlay" id="siteHeader">
     <div class="site-header__inner">
       <a href="index.html" class="logo">
         <img class="logo__mark" src="images/brand/dgm-logo.png" alt="DGM">
@@ -44,13 +44,13 @@
           <li><a href="index.html" class="main-nav__home" aria-label="Home">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11L12 4L20 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9.5V19C6 19.55 6.45 20 7 20H10C10.55 20 11 19.55 11 19V15C11 14.45 11.45 14 12 14H12C12.55 14 13 14.45 13 15V19C13 19.55 13.45 20 14 20H17C17.55 20 18 19.55 18 19V9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a></li>
-          <li class="has-dropdown">
-            <a href="web-design.html">Web Design
+          <li class="has-dropdown is-active">
+            <a href="web-design.html" aria-current="page">Web Design
               <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <div class="main-nav__dropdown">
               <ul class="main-nav__dropdown-menu">
-                <li><a href="#">Website Development</a></li>
+                <li><a href="web-design.html">Website Development</a></li>
                 <li><a href="support.html">WordPress Support</a></li>
               </ul>
             </div>
@@ -77,14 +77,544 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (Web Design): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (Web Design): Hero
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">Web Design — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Award Winning Web Design &amp; Digital Marketing Services</p>
+          <h1 class="hero__heading">High Performance Websites That Delight &amp; Inform Your Visitors, Converting Them Into <span class="text-accent">Customers&hellip;</span></h1>
+          <p class="hero__text">Our web design agency values meaningful outcomes like <span class="hero__typed" id="heroTypedWord" data-words='["love", "Increased Traffic", "Better Conversion Rates", "Higher Sales Revenues", "Qualified Prospects"]'></span><span class="hero__cursor"></span></p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Request a Free Expert Review</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/ve5ydka5j48g3?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Web Design): Web Design Company / Showcase
+       ========================================================================== -->
+  <section class="showcase reveal">
+    <div class="container showcase__inner">
+
+      <div class="showcase__content">
+        <h2 class="showcase__heading">Web Design Company</h2>
+        <p>We work with businesses, organisations &amp; individuals that are invested in having a successful presence online.  People that value and understand the life changing difference a good website can and should make.  We work with smaller home based businesses all the way through to billion &pound; turnover multi-nationals.</p>
+        <p>A website isn't just there to validate your business card.  It is the window to your business and should be working hard 24/7 to attract visitors, nurture their understanding &amp; trust of your value proposition, and effortlessly solicit meaningful inbound enquiries from people that are ready to do business with you like clockwork.</p>
+        <p>If that sounds like you then there's a good chance we'll be a great fit.</p>
+
+        <div class="showcase__buttons">
+          <a href="#contact" class="btn btn--gold">Let's Talk</a>
+          <a href="success-stories.html" class="btn btn--gold">View Our Work</a>
+        </div>
+      </div>
+
+      <div class="showcase__slider">
+        <button type="button" class="showcase__arrow showcase__arrow--prev" aria-label="Previous project">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="showcase__slides" id="showcaseViewport">
+          <div class="showcase__track" id="showcaseTrack">
+            <img class="showcase__slide" src="images/showcase/gurdip.jpg" alt="Gurdip Mortgages website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/homesorhouses.jpg" alt="Homes or Houses website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/finessebrides.jpg" alt="Finesse Brides website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/birmingham-elec.jpg" alt="Birmingham Electrical website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/dogsabouttown.jpg" alt="Dogs About Town website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/boutique-draper.jpg" alt="Boutique Draper website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/sonicsolutions.jpg" alt="Sonic Solutions website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/qutec.jpg" alt="QuTec website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/osprey.jpg" alt="Osprey website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/UK-Electrical.png" alt="UK Electrical website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/BLOCC-Interiors.png" alt="BLOCC Interiors website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/Area-Pest-Control.png" alt="Area Pest Control website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/GainMore-Solutions.png" alt="GainMore Solutions website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/Duomo-UK.png" alt="Duomo UK website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/tariq-miskry.png" alt="Tariq Miskry website shown across desktop, laptop, tablet and phone">
+            <img class="showcase__slide" src="images/showcase/CD-South-West.png" alt="C&amp;D South West website shown across desktop, laptop, tablet and phone">
+          </div>
+        </div>
+
+        <button type="button" class="showcase__arrow showcase__arrow--next" aria-label="Next project">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="showcase__dots" id="showcaseDots"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Web Design): Pricing / Web Design Packages
+       ========================================================================== -->
+  <section class="pricing reveal">
+    <div class="container">
+
+      <div class="pricing__intro">
+        <div class="pricing__intro-col">
+          <h2>How Much Does a Website Cost?</h2>
+          <p><strong class="pricing__lead">Our Website Development Projects start at &pound;3750 exc VAT.</strong> We're not the cheapest, nor are we the most expensive option but we do offer great value web design.  We do a proper job and won't fob you off with an ill-thought out or ineffective website that doesn't earn its keep.  We only take on meaningful projects that clearly deliver value that outweighs any investment in its creation.  Flexible and staged payments are available.</p>
+        </div>
+        <div class="pricing__intro-col">
+          <h2>Web Design Packages</h2>
+          <p>Below is an outline of the typical range of features and deliverables included in one of our web design projects.  One size does not fit all and of course there is room for manoeuvre between these.  If you're not quite sure what you need or have any questions about features please <a href="contact.html" class="pricing__link">get in touch</a> and we'll be happy to answer your questions.</p>
+        </div>
+      </div>
+
+      <div class="pricing__card">
+
+        <div class="pricing-plan">
+          <img class="pricing-plan__icon" src="images/pricing/foundation.svg" alt="" aria-hidden="true">
+          <h3 class="pricing-plan__title">Foundation</h3>
+          <p class="pricing-plan__desc">Get your 'marketing ready' website and set the foundation of your credible online presence. It can grow with you and this provides everything you need</p>
+          <ul class="pricing-plan__list">
+            <li>Half Day In-person Strategy &amp; Planning Session</li>
+            <li>Bespoke Contemporary Design</li>
+            <li>Unlimited Pages</li>
+            <li>Content Management System</li>
+            <li>Speed Optimised</li>
+            <li>Managed Launch</li>
+            <li>GA4, Search Console, Bing Webmaster Tools Configured</li>
+            <li>Website Training</li>
+            <li class="pricing-plan__item--highlight">1 Months Unlimited Website Hosting, Support &amp; Maintenance</li>
+          </ul>
+        </div>
+
+        <div class="pricing-plan">
+          <img class="pricing-plan__icon" src="images/pricing/market-leader.svg" alt="" aria-hidden="true">
+          <h3 class="pricing-plan__title">Market Leader</h3>
+          <p class="pricing-plan__desc">Establish yourself online as a leader in your industry with a thoroughly researched &amp; planned out website that not only looks great but also gets found by your audience</p>
+          <ul class="pricing-plan__list">
+            <li>Full Day In-person Strategy &amp; Planning</li>
+            <li>Extensive Website &amp; Digital Marketing Planning</li>
+            <li>Your Own Custom AI</li>
+            <li>Bespoke Contemporary Design</li>
+            <li>Content Creation &amp; Support</li>
+            <li>Lead Magnet Production</li>
+            <li>Professional Photography</li>
+            <li>Unlimited Pages</li>
+            <li>Content Management System</li>
+            <li>Speed Optimised</li>
+            <li>3rd Party Testing</li>
+            <li>Managed Launch</li>
+            <li>GA4, Search Console, Bing Webmaster Tools Configured</li>
+            <li>Website Training</li>
+            <li class="pricing-plan__item--highlight">3 Months Unlimited Website Hosting, Support &amp; Maintenance</li>
+          </ul>
+        </div>
+
+        <div class="pricing-plan">
+          <span class="pricing-plan__ribbon">Top Seller</span>
+          <img class="pricing-plan__icon" src="images/pricing/apex.svg" alt="" aria-hidden="true">
+          <h3 class="pricing-plan__title">Apex</h3>
+          <p class="pricing-plan__desc">This is only for serious businesses that intend on playing to WIN. Businesses that value a regular and consistent stream of inbound enquiries from informed &amp; qualified prospects</p>
+          <ul class="pricing-plan__list">
+            <li>Full Day In-person Strategy &amp; Planning</li>
+            <li>Extensive Website &amp; Digital Marketing Planning</li>
+            <li>Your Own Custom AI</li>
+            <li>Bespoke Contemporary Design</li>
+            <li>Content Creation &amp; Support</li>
+            <li>Lead Magnet Production</li>
+            <li>Professional Photography</li>
+            <li>Unlimited Pages</li>
+            <li>Content Management System</li>
+            <li>Speed Optimised</li>
+            <li>3rd Party Testing</li>
+            <li>Managed Launch</li>
+            <li>GA4, Search Console, Bing Webmaster Tools Configured</li>
+            <li>Website Training</li>
+            <li class="pricing-plan__item--highlight">3 Months Unlimited Website Hosting, Support &amp; Maintenance</li>
+            <li>3 Months of Sales &amp; Marketing Support (PPC, Email, Social Media)</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pricing__footer">
+        <p>If you're unsure on what any of these features and deliverables mean and how they would benefit your project, we'd be happy to run through it with you and answer any questions.</p>
+        <p>Call us on <a href="tel:01217262522" class="pricing__link">0121 726 2522</a>, open the <a href="contact.html" class="pricing__link">Contact Form</a>, email us at <a href="mailto:hello@digitalgroupmedia.com" class="pricing__link">hello@digitalgroupmedia.com</a> or open our <a href="#" class="pricing__link">Live Chat Box</a> during working hours.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Recent Work
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="portfolio reveal">
+    <div class="portfolio__grid">
+
+      <div class="portfolio-text portfolio-text--intro">
+        <h2 class="portfolio-text__heading">RECENT<br>WORK</h2>
+        <a href="success-stories.html" class="portfolio-text__link">View Success Stories</a>
+      </div>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/uk-electrical-installations.png" alt="UK Electrical Installations">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">UK Electrical Installations</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/sonic-solutions.jpg" alt="Sonic Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Sonic Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/blocc-interiors.jpg" alt="BLOCC Interiors">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">BLOCC Interiors</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/everquip.png" alt="Everquip">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Everquip</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/duomo-uk.png" alt="Duomo UK">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Duomo UK</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/qutec.png" alt="QuTec">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">QuTec</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/cd-southwest.png" alt="C&amp;D South West">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">C&amp;D South West</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/gainmore-solutions.png" alt="GainMore Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">GainMore Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <div class="portfolio-text portfolio-text--outro">
+        <h2 class="portfolio-text__heading">YOU<br>NEXT?</h2>
+        <a href="#contact" class="portfolio-text__link">Get in Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Why Work With Us
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="why reveal">
+    <div class="container">
+      <h2 class="why__heading">Why Work With Us?</h2>
+      <p class="why__subheading">We work with Owners, Directors or Marketing Managers of established UK based SME&rsquo;s that need better results from their online presence.</p>
+    </div>
+
+    <div class="why__slider-wrap">
+      <button class="why__arrow why__arrow--prev" id="whyPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="why__slider container">
+        <div class="why__track" id="whyTrack">
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V16.5C7 15.4 6 13.6 6 11.5C6 8 8.7 5 12 5C15.3 5 18 8 18 11.5C18 13.6 17 15.4 15 16.5V18H9Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 18V19.5C9 20.3 9.7 21 10.5 21H13.5C14.3 21 15 20.3 15 19.5V18" stroke="currentColor" stroke-width="1.4"/><path d="M4 9L5.5 9.5M20 9L18.5 9.5M12 3V4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Knowledge &amp; Experience</h3>
+            <p class="why__card-text">We&rsquo;ve been going for over 15 years (est 2008) and have experience working with a wide range of businesses, organisations and industries. We&rsquo;re not hobbyists chancing it on your dime. You will benefit from our hard earned experience &amp; insight.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 19L7 12L11 15L2 19Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M22 19L17 12L13 15L22 19Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 6L12 3L15 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Easy To Work With</h3>
+            <p class="why__card-text">We&rsquo;re &ldquo;people&rdquo; people. Strategy, knowledge and experience counts for nothing if you can&rsquo;t communicate or work openly and effectively which is something we pride ourselves in. We build strong friendly &amp; transparent relationships with our clients.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M7.5 15.5V12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 15.5V8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M16.5 15.5V10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Results Driven</h3>
+            <p class="why__card-text">We establish and measure the success of a project against mutually agreed metrics, whether it be an increase in visitors, a higher conversion rate, or an enhanced feeling towards your brand. Whatever they are, we think about it in everything that we do so that at the end of project we all know it&rsquo;s a success.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7L7 8.5L9 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M15.5 4.5L18.5 7.5M18.5 4.5L15.5 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M17 14L20.5 17.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M14.5 15.5C14.5 15.5 15.5 21 20 20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Discernment</h3>
+            <p class="why__card-text">We don&rsquo;t say yes to every project that comes our way preferring only to work passionately and enthusiastically with people on projects where we can make a real tangible difference.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 15 5 13 7 13C9 13 10 15 12 15C14 15 15 13 17 13C19 13 21 15 21 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><path d="M12 6.5V9.5M10.7 8H13.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M4 19H20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Great Value</h3>
+            <p class="why__card-text">We&rsquo;re not the cheapest option, but few can deliver value or a return on investment like we can. Our clients find our honest and transparent approach to creating a project scope and quoting for a project refreshing.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L21 8L12 12L3 8L12 4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 10.5V15C7 15 9 17 12 17C15 17 17 15 17 15V10.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M21 8V13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">We Never Stop Learning</h3>
+            <p class="why__card-text">Our ability to deliver results is our ability to make a living and we never stop investing our time and money into learning new skills and strategies that our clients can benefit from.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3.5H16L15 6H9L8 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><rect x="6" y="6" width="12" height="15" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 11L11 13L15.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Processes &amp; Systems</h3>
+            <p class="why__card-text">Over the years we&rsquo;ve honed and refined our project management processes. The way in which we manage projects is unique to us and delivers the highest standard of work in the quickest possible way whilst keeping our clients informed every step of the way.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M10 19H14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 3C8.5 3 6.5 5.5 6.5 8.5C6.5 10.8 7.8 12 9 13.2C9.6 13.8 10 14.6 10 15.5H14C14 14.6 14.4 13.8 15 13.2C16.2 12 17.5 10.8 17.5 8.5C17.5 5.5 15.5 3 12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M18.5 6.5L20.5 5.5M18.5 10.5L20.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Creativity</h3>
+            <p class="why__card-text">We take great pride in designing contemporary, user-friendly websites, that represent our clients in the best possible light but thinking creatively isn&rsquo;t only limited to graphic design it&rsquo;s something we apply to every discipline.</p>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="why__arrow why__arrow--next" id="whyNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Trusted By
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="trusted reveal">
+    <div class="container">
+      <h2 class="trusted__heading">Trusted by</h2>
+    </div>
+
+    <div class="trusted__marquee">
+      <div class="trusted__track">
+        <div class="trusted__group">
+          <img src="images/trusted-logos/accurate-laser-log-1.png" alt="Accurate Laser">
+          <img src="images/trusted-logos/APC-Logo-2019-Copy-1.png" alt="APC">
+          <img src="images/trusted-logos/appliedpumps-logo-1.png" alt="Applied Pumps">
+          <img src="images/trusted-logos/Beaumont-Logo-white-text.png" alt="Beaumont">
+          <img src="images/trusted-logos/Blocc-Interiors-Logo.png" alt="Blocc Interiors">
+          <img src="images/trusted-logos/cd.png" alt="CD">
+          <img src="images/trusted-logos/Duomo-UK-1-1.png" alt="Duomo UK">
+          <img src="images/trusted-logos/EasyTots-Logo-MASTER-Colour-1.png" alt="EasyTots">
+          <img src="images/trusted-logos/face-envy-1.png" alt="Face Envy">
+          <img src="images/trusted-logos/gainmore-logo.png" alt="Gainmore">
+          <img src="images/trusted-logos/kitchen-doors-worktops-logo-1.png" alt="Kitchen Doors &amp; Worktops">
+          <img src="images/trusted-logos/logo-Mr-Tariq-Miskry-v3-1.png" alt="Mr Tariq Miskry">
+          <img src="images/trusted-logos/logoQT-inverted-colors-v3-1.png" alt="QT">
+          <img src="images/trusted-logos/psa-uk-logo-1.png" alt="PSA UK">
+          <img src="images/trusted-logos/Raptor-Logo_Colour-1.png" alt="Raptor">
+          <img src="images/trusted-logos/Sonic-Solutions-Industrial-Parts-Cleaning-1.png" alt="Sonic Solutions">
+          <img src="images/trusted-logos/UK-Electrical-Instalaltions-1.png" alt="UK Electrical Installations">
+          <img src="images/trusted-logos/woodwool-uk-logo-1.png" alt="Woodwool UK">
+          <img src="images/trusted-logos/WRT-Logo-2020-1.png" alt="WRT">
+          <img src="images/trusted-logos/everquip-logo-version-2.png" alt="Everquip">
+        </div>
+        <div class="trusted__group" aria-hidden="true">
+          <img src="images/trusted-logos/accurate-laser-log-1.png" alt="">
+          <img src="images/trusted-logos/APC-Logo-2019-Copy-1.png" alt="">
+          <img src="images/trusted-logos/appliedpumps-logo-1.png" alt="">
+          <img src="images/trusted-logos/Beaumont-Logo-white-text.png" alt="">
+          <img src="images/trusted-logos/Blocc-Interiors-Logo.png" alt="">
+          <img src="images/trusted-logos/cd.png" alt="">
+          <img src="images/trusted-logos/Duomo-UK-1-1.png" alt="">
+          <img src="images/trusted-logos/EasyTots-Logo-MASTER-Colour-1.png" alt="">
+          <img src="images/trusted-logos/face-envy-1.png" alt="">
+          <img src="images/trusted-logos/gainmore-logo.png" alt="">
+          <img src="images/trusted-logos/kitchen-doors-worktops-logo-1.png" alt="">
+          <img src="images/trusted-logos/logo-Mr-Tariq-Miskry-v3-1.png" alt="">
+          <img src="images/trusted-logos/logoQT-inverted-colors-v3-1.png" alt="">
+          <img src="images/trusted-logos/psa-uk-logo-1.png" alt="">
+          <img src="images/trusted-logos/Raptor-Logo_Colour-1.png" alt="">
+          <img src="images/trusted-logos/Sonic-Solutions-Industrial-Parts-Cleaning-1.png" alt="">
+          <img src="images/trusted-logos/UK-Electrical-Instalaltions-1.png" alt="">
+          <img src="images/trusted-logos/woodwool-uk-logo-1.png" alt="">
+          <img src="images/trusted-logos/WRT-Logo-2020-1.png" alt="">
+          <img src="images/trusted-logos/everquip-logo-version-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Reality Check CTA
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="reality reveal">
+    <div class="container">
+      <div class="reality__card">
+        <span class="reality__blob" aria-hidden="true"></span>
+
+        <div class="reality__content">
+          <h2 class="reality__heading">See What&rsquo;s Really Holding Your Sales &amp; Marketing Back&hellip;</h2>
+          <p class="reality__text">Get a clear, honest view of what&rsquo;s working, what isn&rsquo;t, and where the real opportunities are for growth over the next 12 months <strong>FOR FREE</strong> <em>(Most agencies charge &pound;2,000+ for this level of insight and clarity)</em></p>
+          <a href="#contact" class="btn btn--gold">Start Your Reality Check Now</a>
+        </div>
+
+        <div class="reality__media">
+          <iframe class="reality__iframe" allowtransparency="true" src="https://adilo.bigcommand.com/watch/Oq86KQI1" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Client Testimonials
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="testimonials reveal">
+    <div class="container">
+      <h2 class="testimonials__heading">What Our Clients Say About Us</h2>
+
+      <div class="testimonials__grid">
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rhmNgWd2NWI" title="Gurdip.co.uk Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/h7kqboepz2E" title="Sonic Solutions Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rcXlBKi2MAc" title="Beaumont TM Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/4m2zeAK1ZBc" title="room44 Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a href="success-stories.html" class="btn btn--gold testimonials__cta">See More Success Stories</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Let's Have a Chat
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="chat-cta reveal">
+    <div class="chat-cta__decor" aria-hidden="true">
+      <img class="chat-cta__blob chat-cta__blob--1" src="images/sections/chat-cta-blob-1.png" alt="">
+      <img class="chat-cta__blob chat-cta__blob--2" src="images/sections/chat-cta-blob-2.png" alt="">
+      <img class="chat-cta__photo" src="images/sections/chat-cta-photo.png" alt="Two DGM team members in yellow branded hoodies">
+    </div>
+
+    <div class="container chat-cta__inner">
+      <div class="chat-cta__spacer" aria-hidden="true"></div>
+      <div class="chat-cta__content">
+        <h2 class="chat-cta__heading">Let&rsquo;s Have a Chat</h2>
+        <p class="chat-cta__text">Click the button below to find a free slot in our calendar to discuss how we can help you achieve your sales &amp; marketing goals.<br>Or call our office on <strong>0121 224 7412</strong></p>
+        <a href="#contact" class="btn btn--gold chat-cta__cta">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Schedule a Zoom call
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================================
        GLOBAL: Footer

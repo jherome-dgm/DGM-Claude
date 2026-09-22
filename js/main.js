@@ -3,10 +3,45 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initBackToTop();
   initWhySlider();
+  initShowcaseSlider();
   initStickyHeader();
   initScrollReveal();
   initMobileNav();
 });
+
+function initShowcaseSlider() {
+  const track = document.getElementById('showcaseTrack');
+  const dotsWrap = document.getElementById('showcaseDots');
+  const prevBtn = document.querySelector('.showcase__arrow--prev');
+  const nextBtn = document.querySelector('.showcase__arrow--next');
+  if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+  const slides = track.querySelectorAll('.showcase__slide');
+  if (!slides.length) return;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'showcase__dot';
+    dot.setAttribute('aria-label', `Go to project ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = dotsWrap.querySelectorAll('.showcase__dot');
+  let index = 0;
+
+  function goTo(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, di) => dot.classList.toggle('is-active', di === index));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
+
+  goTo(0);
+}
 
 function initMobileNav() {
   const headerInner = document.querySelector('.site-header__inner');
@@ -153,7 +188,14 @@ function initHeroTypewriter() {
   const el = document.getElementById('heroTypedWord');
   if (!el) return;
 
-  const words = ['love', 'trust', 'buy from', 'understand', 'respect', 'learn from', 'find'];
+  let words = ['love', 'trust', 'buy from', 'understand', 'respect', 'learn from', 'find'];
+  if (el.dataset.words) {
+    try {
+      words = JSON.parse(el.dataset.words);
+    } catch (err) {
+      /* fall back to default words */
+    }
+  }
   const typeSpeed = 80;
   const deleteSpeed = 45;
   const holdDelay = 1400;
