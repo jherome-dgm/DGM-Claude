@@ -20,21 +20,35 @@ const mime = {
   '.woff2': 'font/woff2',
 };
 
-http.createServer((req, res) => {
-  let urlPath = decodeURIComponent(req.url.split('?')[0]);
-  if (urlPath === '/') urlPath = '/index.html';
-  const filePath = path.join(root, urlPath);
-
+function serveFile(filePath, res) {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('404 Not Found: ' + urlPath);
+      res.end('404 Not Found');
       return;
     }
     const ext = path.extname(filePath).toLowerCase();
     res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
     res.end(data);
   });
+}
+
+http.createServer((req, res) => {
+  let urlPath = decodeURIComponent(req.url.split('?')[0]);
+  if (urlPath === '/') urlPath = '/index.html';
+  const filePath = path.join(root, urlPath);
+
+  // Clean-URL support (mirrors Cloudflare Pages): /about-us -> about-us.html
+  if (!path.extname(filePath)) {
+    const htmlPath = filePath + '.html';
+    fs.access(htmlPath, fs.constants.F_OK, (err) => {
+      if (!err) return serveFile(htmlPath, res);
+      serveFile(filePath, res);
+    });
+    return;
+  }
+
+  serveFile(filePath, res);
 }).listen(port, () => {
   console.log(`Dev server running at http://localhost:${port}`);
 });
