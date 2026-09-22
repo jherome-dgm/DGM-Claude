@@ -78,12 +78,301 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (About Us): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (About Us)
+       ========================================================================== -->
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
+    </div>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Award Winning Web Design &amp; Digital Marketing Services</p>
+          <h1 class="hero__heading">About <span class="text-accent">Digital Group Media</span></h1>
+          <p class="hero__text">We work with Owners, Directors or Marketing Managers of established UK based SME&rsquo;s that need better results from their online presence.</p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Request a free expert review</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/xsi5a3e7ao5n1?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (About Us): Our Story / Our Values
+       ========================================================================== -->
+  <section class="about-story reveal">
+    <div class="container about-story__grid">
+
+      <div class="about-story__col">
+        <img class="about-story__photo" src="images/sections/james-danny.png" alt="James and Danny, founders of Digital Group Media">
+        <h2 class="about-story__heading">Digital Group Media Limited</h2>
+        <p>Whilst we were incorporated in 2016 the business was started by Managing Director James Middleditch back in 2008 which then became a partnership in 2012 when Danny joined him and the team has grown from there to include Nick, Mark, Jherome, Jemma and a growing team of other dedicated digital marketing specialists that we work with exclusively to fulfil aspects of our client projects such as Google Ads Management, SEO, Copywriting etc.</p>
+        <p>We&rsquo;re headquartered at our central office in the heart of Birmingham&rsquo;s creative quarter in Digbeth at the legendary Custard Factory.</p>
+        <p>Whilst we have our own permanent office, we&rsquo;ve been leveraging remote working since long before the pandemic. This means we can use the best people and they have the freedom to work in the environment that is most conducive to their happiness and ultimately the quality of their work. This is why we offer often unbeatable value as we simply don&rsquo;t carry the overhead costs that many other web design &amp; digital marketing agencies do.</p>
+        <p>We&rsquo;re proud to be small &amp; flexible and don&rsquo;t pretend to be anything but. This means that every project gets top-level involvement on our part and no client gets fobbed off with the office junior or apprentice.</p>
+        <p>We&rsquo;d be more than happy to have a chat on in-person, on zoom or over the phone about how we might be able to help you with your web design &amp; digital marketing needs.</p>
+        <a href="#contact" class="btn btn--gold">Let&rsquo;s Talk</a>
+      </div>
+
+      <div class="about-story__col">
+        <h2 class="about-story__heading">Our Values</h2>
+        <ul class="about-story__values">
+          <li><strong>Respect</strong> &ndash; We have tremendous respect for our clients and the businesses that they&rsquo;re growing. It&rsquo;s hard work and not for the faint hearted. We also respect ourselves, so it&rsquo;s a two-way street which leads to great mutual partnerships.</li>
+          <li><strong>Knowledge</strong> &ndash; Our ability to make a living is dependant on how effectively we can produce results. We attack our knowledge gaps with gusto and continue to spend thousands on developing our capabilities in all disciplines.</li>
+          <li><strong>Meaningful Results</strong> &ndash; We only work on projects where all the people involved are dependant on positive outcomes and meaningful results. It keeps everyone focused on moving forward and the buzz you get when a specific and measurable result is achieved is hard to beat. It may seem like stating the obvious but it&rsquo;s a nightmare working with unaccountable people that aren&rsquo;t invested in meaningful results even if they have the budget to spend.</li>
+          <li><strong>Transparency</strong> &ndash; We like to be open about what we do, how we do it and what the strengths &amp; weaknesses of any trajectory are. Digital Marketing can be a scary world for the uninitiated, and we prefer to cut through the BS.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Recent Work
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="portfolio reveal">
+    <div class="portfolio__grid">
+
+      <div class="portfolio-text portfolio-text--intro">
+        <h2 class="portfolio-text__heading">RECENT<br>WORK</h2>
+        <a href="/success-stories" class="portfolio-text__link">View Success Stories</a>
+      </div>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/uk-electrical-installations.png" alt="UK Electrical Installations">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">UK Electrical Installations</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/sonic-solutions.jpg" alt="Sonic Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Sonic Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/blocc-interiors.jpg" alt="BLOCC Interiors">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">BLOCC Interiors</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/everquip.png" alt="Everquip">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Everquip</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/duomo-uk.png" alt="Duomo UK">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Duomo UK</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/qutec.png" alt="QuTec">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">QuTec</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/cd-southwest.png" alt="C&amp;D South West">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">C&amp;D South West</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/gainmore-solutions.png" alt="GainMore Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">GainMore Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <div class="portfolio-text portfolio-text--outro">
+        <h2 class="portfolio-text__heading">YOU<br>NEXT?</h2>
+        <a href="#contact" class="portfolio-text__link">Get in Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (About Us): How Can We Help You (dark slider variant)
+       ========================================================================== -->
+  <section class="help-dark reveal">
+    <div class="container">
+      <h2 class="help-dark__heading">How can we help you?</h2>
+      <p class="help-dark__subheading">These are the 10 key activity areas that businesses depend on if they want to see growth or stable revenue through a regular flow of qualified inbound sales enquiries. Each element has a bearing on the other and the importance of each element will vary from one business to another. You may need to work on one, some, or all of these to unlock the results you deserve.</p>
+    </div>
+
+    <div class="help-dark__slider-wrap">
+      <button class="help-dark__arrow help-dark__arrow--prev" id="helpDarkPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="help-dark__slider container" id="helpDarkSlider">
+        <div class="help-dark__track" id="helpDarkTrack">
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/foundation.png" alt="Foundation">
+            <h3 class="help-dark__card-title">Foundation</h3>
+            <p class="help-dark__card-text">These are the fundamentals that if understood with clarity make everything else in sales &amp; marketing far easier &amp; more effective.</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/branding-identity.png" alt="Brand & Positioning">
+            <h3 class="help-dark__card-title">Brand &amp; Positioning</h3>
+            <p class="help-dark__card-text">This is about more than having a nice logo, this is about how people perceive your brand, your value proposition and where it fits in the marketplace.</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/web-design-development.png" alt="Website">
+            <h3 class="help-dark__card-title">Website</h3>
+            <p class="help-dark__card-text">The hub of most of your sales &amp; marketing activity &amp; the primary source of information for your prospects. Your website should be your best salesperson.</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/search-engine-marketing.png" alt="Search & AI Discoverability">
+            <h3 class="help-dark__card-title">Search &amp; AI Discoverability</h3>
+            <p class="help-dark__card-text">This is about understanding the opportunities that exist on the search engines &amp; AI platforms. Can people find you when searching for a solution to their problem or need?</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/content-marketing.png" alt="Content Marketing">
+            <h3 class="help-dark__card-title">Content Marketing</h3>
+            <p class="help-dark__card-text">How effectively or strategically are you using video, images, audio &amp; text to become the trusted thought leader in your market?</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/email-marketing.png" alt="Email">
+            <h3 class="help-dark__card-title">Email</h3>
+            <p class="help-dark__card-text">We all send &amp; receive email, some more effectively than others. This relatively low cost tool enables you to automate and scale the delivery of your value proposition to the right people at the right time.</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/social-media.png" alt="Social Media">
+            <h3 class="help-dark__card-title">Social Media</h3>
+            <p class="help-dark__card-text">Whatever your personal preferences, most of your customers are using some combination of Facebook, Instagram, TikTok, LinkedIn &amp; Twitter etc. Are you part of the conversation?</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/offline-marketing.png" alt="Offline Marketing">
+            <h3 class="help-dark__card-title">Offline Marketing</h3>
+            <p class="help-dark__card-text">How effectively are you using time tested traditional sales &amp; marketing methods to generate leads &amp; sales?</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/insights-analytics.png" alt="Insights & Analytics">
+            <h3 class="help-dark__card-title">Insights &amp; Analytics</h3>
+            <p class="help-dark__card-text">What gets measured gets improved. Tangible success is difficult to replicate or scale unless you measure and improve on how it occurs in the first place.</p>
+          </article>
+
+          <article class="help-dark__card">
+            <img class="help-dark__icon" src="images/icons/coaching-consultancy.png" alt="Coaching & Consultancy">
+            <h3 class="help-dark__card-title">Coaching &amp; Consultancy</h3>
+            <p class="help-dark__card-text">How effectively are you leveraging expertise from outside of your business to improve sales &amp; marketing?</p>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="help-dark__arrow help-dark__arrow--next" id="helpDarkNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="container">
+      <a href="#contact" class="btn btn--gold help-dark__cta">Take the sales &amp; marketing assessment now</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (About Us): more sections go here
+       Waiting on next screenshot batch — see memory: project_site_map
        ========================================================================== -->
   <main class="page-placeholder">
     <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">About Us — sections coming soon.</p>
+      <p style="padding: 60px 0; text-align: center; color: #999;">More About Us sections coming soon.</p>
     </div>
   </main>
 

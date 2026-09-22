@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initWhySlider();
   initShowcaseSlider();
+  initStoriesShowcase();
+  initHelpDarkSlider();
   initStickyHeader();
   initScrollReveal();
   initMobileNav();
@@ -65,6 +67,98 @@ function initShowcaseSlider() {
   nextBtn.addEventListener('click', () => goTo(index + 1));
 
   goTo(0);
+}
+
+function initStoriesShowcase() {
+  const viewport = document.getElementById('storiesShowcaseViewport');
+  const track = document.getElementById('storiesShowcaseTrack');
+  const dotsWrap = document.getElementById('storiesShowcaseDots');
+  const prevBtn = document.querySelector('.stories-showcase__arrow--prev');
+  const nextBtn = document.querySelector('.stories-showcase__arrow--next');
+  if (!viewport || !track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+  const slides = track.querySelectorAll('.stories-showcase__slide');
+  if (!slides.length) return;
+
+  function getPerView() {
+    return window.matchMedia('(max-width: 900px)').matches ? 1 : 3;
+  }
+
+  let perView = getPerView();
+  let maxIndex = Math.max(0, slides.length - perView);
+  let index = 0;
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i <= maxIndex; i++) {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'stories-showcase__dot';
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function update() {
+    const dots = dotsWrap.querySelectorAll('.stories-showcase__dot');
+    dots.forEach((dot, di) => dot.classList.toggle('is-active', di === index));
+
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    const step = slides[0].getBoundingClientRect().width + gap;
+    track.style.transform = `translateX(-${index * step}px)`;
+  }
+
+  function goTo(i) {
+    index = Math.min(Math.max(i, 0), maxIndex);
+    update();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const newPerView = getPerView();
+      if (newPerView !== perView) {
+        perView = newPerView;
+        maxIndex = Math.max(0, slides.length - perView);
+        index = Math.min(index, maxIndex);
+        buildDots();
+      }
+      update();
+    }, 150);
+  });
+
+  buildDots();
+  update();
+}
+
+function initHelpDarkSlider() {
+  const slider = document.getElementById('helpDarkSlider');
+  const track = document.getElementById('helpDarkTrack');
+  const prevBtn = document.getElementById('helpDarkPrev');
+  const nextBtn = document.getElementById('helpDarkNext');
+  if (!slider || !track || !prevBtn || !nextBtn) return;
+
+  function scrollStep(direction) {
+    const cards = track.querySelectorAll('.help-dark__card');
+    if (!cards.length) return;
+    const trackStyles = getComputedStyle(track);
+    const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || '0');
+    const step = cards[0].getBoundingClientRect().width + gap;
+
+    const currentIndex = Math.round(slider.scrollLeft / step);
+    const maxIndex = cards.length - 1;
+    const nextIndex = Math.min(Math.max(currentIndex + direction, 0), maxIndex);
+
+    slider.scrollTo({ left: nextIndex * step, behavior: 'smooth' });
+  }
+
+  prevBtn.addEventListener('click', () => scrollStep(-1));
+  nextBtn.addEventListener('click', () => scrollStep(1));
 }
 
 function initMobileNav() {
@@ -183,12 +277,17 @@ function initWhySlider() {
   if (!slider || !track || !prevBtn || !nextBtn) return;
 
   function scrollStep(direction) {
-    const card = track.querySelector('.why__card');
-    if (!card) return;
+    const cards = track.querySelectorAll('.why__card');
+    if (!cards.length) return;
     const trackStyles = getComputedStyle(track);
     const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || '0');
-    const amount = (card.getBoundingClientRect().width + gap) * direction;
-    slider.scrollBy({ left: amount, behavior: 'smooth' });
+    const step = cards[0].getBoundingClientRect().width + gap;
+
+    const currentIndex = Math.round(slider.scrollLeft / step);
+    const maxIndex = cards.length - 1;
+    const nextIndex = Math.min(Math.max(currentIndex + direction, 0), maxIndex);
+
+    slider.scrollTo({ left: nextIndex * step, behavior: 'smooth' });
   }
 
   prevBtn.addEventListener('click', () => scrollStep(-1));

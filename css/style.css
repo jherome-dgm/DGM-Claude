@@ -101,6 +101,58 @@ body {
   }
 }
 
+h1,
+h2 {
+  line-height: 110% !important;
+}
+
+h3,
+h4 {
+  line-height: 130% !important;
+}
+
+@media (min-width: 981px) {
+  h3 {
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 980px) {
+  h3 {
+    font-size: 18px !important;
+  }
+}
+
+/* ==========================================================================
+   Global: Paragraphs
+   ========================================================================== */
+
+@media (min-width: 981px) {
+  p {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 980px) {
+  p {
+    font-size: 15px !important;
+  }
+}
+
+p {
+  line-height: 150% !important;
+}
+
+/* ==========================================================================
+   Global: Lists
+   ========================================================================== */
+
+li,
+ol {
+  font-size: 18px !important;
+  line-height: 150% !important;
+}
+
 /* ==========================================================================
    Global: Scroll-reveal animation
    ========================================================================== */
@@ -3221,7 +3273,7 @@ body {
 
 .roadmap-intro__inner {
   display: grid;
-  grid-template-columns: minmax(0, 480px) 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(16px, 2.5vw, 32px);
   align-items: flex-end;
 }
@@ -3253,18 +3305,18 @@ body {
   margin-bottom: 0;
 }
 
+.roadmap-intro__media {
+  display: flex;
+  justify-content: center;
+}
+
 .roadmap-intro__media img {
   width: 100%;
-  max-width: 520px;
+  max-width: 550px;
   height: auto;
   display: block;
 }
 
-@media (min-width: 901px) {
-  .roadmap-intro .container {
-    max-width: min(70vw, 1200px);
-  }
-}
 
 @media (max-width: 900px) {
   .roadmap-intro__inner {
@@ -3404,6 +3456,240 @@ body {
 }
 
 /* ==========================================================================
+   Success Stories: Intro
+   ========================================================================== */
+
+.stories-intro {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.stories-intro__inner {
+  max-width: 960px;
+}
+
+.stories-intro__inner p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.stories-intro__inner .btn {
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Success Stories: Project Showcase Carousel
+   ========================================================================== */
+
+.stories-showcase {
+  background: #ffffff;
+  padding: 0 0 clamp(60px, 8vw, 100px);
+}
+
+.stories-showcase__slider {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 24px);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.stories-showcase__viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.stories-showcase__track {
+  display: flex;
+  gap: clamp(16px, 2vw, 32px);
+  transition: transform 0.5s ease;
+}
+
+.stories-showcase__slide {
+  flex: 0 0 calc((100% - 2 * clamp(16px, 2vw, 32px)) / 3);
+  width: calc((100% - 2 * clamp(16px, 2vw, 32px)) / 3);
+  object-fit: contain;
+  object-position: center;
+}
+
+.stories-showcase__arrow {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--color-pink);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.stories-showcase__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stories-showcase__arrow:hover {
+  color: var(--color-pink-deep);
+}
+
+.stories-showcase__arrow--prev:hover {
+  transform: translateX(-4px);
+}
+
+.stories-showcase__arrow--next:hover {
+  transform: translateX(4px);
+}
+
+.stories-showcase__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.stories-showcase__dot {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  border-radius: 50%;
+  background: rgba(214, 2, 98, 0.25);
+  transition: background-color 0.2s ease;
+}
+
+.stories-showcase__dot.is-active {
+  background: var(--color-pink);
+}
+
+@media (max-width: 900px) {
+  .stories-showcase__slide {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Success Stories: Case Studies
+   ========================================================================== */
+
+.case-studies {
+  background: #ffffff;
+  padding: clamp(40px, 6vw, 80px) 0 0;
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+  padding: clamp(36px, 5vw, 56px) 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.case-study:last-child {
+  border-bottom: none;
+}
+
+.case-study__shot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.case-study__video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.case-study__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.case-study__services {
+  margin-top: 24px;
+}
+
+.case-study__services-heading {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 10px;
+}
+
+.case-study__services-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-navy);
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.case-study__services-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 2px;
+  color: var(--color-pink);
+}
+
+.case-study__logo {
+  max-width: 180px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.case-study__text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.case-study__quote {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  color: var(--color-pink-deep);
+  border-left: 3px solid var(--color-pink);
+  padding-left: 16px;
+  margin: 0 0 16px;
+  font-size: 30px !important;
+  line-height: 110% !important;
+}
+
+.case-study__link {
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .case-study {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Global: Buttons — full-width on small screens
    Placed last so it wins over earlier same-specificity *__cta width rules.
    ========================================================================== */
@@ -3411,5 +3697,211 @@ body {
 @media (max-width: 480px) {
   .btn {
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   About Us: Our Story / Our Values
+   ========================================================================== */
+
+.about-story {
+  background: #ffffff;
+  padding: clamp(50px, 7vw, 90px) 0;
+}
+
+.about-story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 96px);
+}
+
+.about-story__photo {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.about-story__heading {
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+}
+
+.about-story__col p {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.about-story__col .btn {
+  margin-top: 8px;
+}
+
+.about-story__values {
+  list-style: none;
+}
+
+.about-story__values li {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-story__values li:last-child {
+  margin-bottom: 0;
+}
+
+.about-story__values strong {
+  color: var(--color-pink);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .about-story__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-story__photo {
+    max-width: 260px;
+  }
+}
+
+/* ==========================================================================
+   About Us: How Can We Help You (dark slider variant)
+   ========================================================================== */
+
+.help-dark {
+  background: var(--color-dark-text);
+  padding: 90px 0 100px;
+}
+
+.help-dark__heading {
+  text-align: center;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+.help-dark__subheading {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 56px;
+  padding: 0 clamp(16px, 4vw, 40px);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.help-dark__slider-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: var(--container-width);
+  margin: 0 auto 40px;
+}
+
+.help-dark__slider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: clamp(16px, 4vw, 40px);
+  scroll-padding-right: clamp(16px, 4vw, 40px);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.help-dark__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.help-dark__track {
+  display: flex;
+  gap: 32px;
+  padding: 6px 0 20px;
+}
+
+.help-dark__card {
+  flex: 0 0 calc((100% - 96px) / 4);
+  scroll-snap-align: start;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 32px;
+  min-height: 300px;
+}
+
+.help-dark__icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.help-dark__card-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+}
+
+.help-dark__card-text {
+  color: #444;
+}
+
+.help-dark__arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.help-dark__arrow svg {
+  width: 26px;
+  height: 26px;
+}
+
+.help-dark__arrow:hover {
+  color: #ffffff;
+}
+
+.help-dark__cta {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .help-dark__card {
+    flex-basis: calc((100% - 32px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .help-dark {
+    padding: 60px 0 70px;
+  }
+
+  .help-dark__heading {
+    font-size: 26px;
+  }
+
+  .help-dark__subheading {
+    margin-bottom: 36px;
+  }
+
+  .help-dark__card {
+    flex-basis: 82%;
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .help-dark__arrow {
+    display: none;
   }
 }

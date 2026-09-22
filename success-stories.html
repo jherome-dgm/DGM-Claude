@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="images/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -78,14 +78,819 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (Success Stories): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (Success Stories)
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">Success Stories — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Award Winning Web Design &amp; Digital Marketing Services</p>
+          <h1 class="hero__heading">Success <span class="text-accent">Stories</span></h1>
+          <p class="hero__text">We work with Owners, Directors or Marketing Managers of established UK based SME&rsquo;s that need better results from their online presence.</p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Request a free expert review</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/xsi5a3e7ao5n1?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Success Stories): Intro
+       ========================================================================== -->
+  <section class="stories-intro reveal">
+    <div class="container stories-intro__inner">
+      <p>Over the years we&rsquo;ve worked with hundreds of businesses, organisations and people in a variety of ways.  For some, we&rsquo;re only involved with them briefly to deliver a piece of work whilst they then go on to manage and handle their ongoing marketing themselves. For others, we&rsquo;re a lot more involved with their business, delivering results that enable them to focus on what they do best and serve the customers we generate for them.</p>
+      <p>Below, in no particular order is a selection of work that touches on a number of different scenarios, budgets and levels of involvement all of which have created positive outcomes.</p>
+      <a href="#contact" class="btn btn--gold">Let&rsquo;s Talk</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Success Stories): Project Showcase Carousel
+       ========================================================================== -->
+  <section class="stories-showcase reveal">
+    <div class="stories-showcase__slider">
+      <button type="button" class="stories-showcase__arrow stories-showcase__arrow--prev" aria-label="Previous projects">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="stories-showcase__viewport" id="storiesShowcaseViewport">
+        <div class="stories-showcase__track" id="storiesShowcaseTrack">
+          <img class="stories-showcase__slide" src="images/showcase/gurdip.jpg" alt="Gurdip Mortgages website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/homesorhouses.jpg" alt="Homes or Houses website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/finessebrides.jpg" alt="Finesse Brides website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/birmingham-elec.jpg" alt="Birmingham Electrical website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/dogsabouttown.jpg" alt="Dogs About Town website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/boutique-draper.jpg" alt="Boutique Draper website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/sonicsolutions.jpg" alt="Sonic Solutions website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/qutec.jpg" alt="QuTec website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/osprey.jpg" alt="Osprey website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/UK-Electrical.png" alt="UK Electrical website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/BLOCC-Interiors.png" alt="BLOCC Interiors website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/Area-Pest-Control.png" alt="Area Pest Control website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/GainMore-Solutions.png" alt="GainMore Solutions website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/Duomo-UK.png" alt="Duomo UK website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/tariq-miskry.png" alt="Tariq Miskry website shown across desktop, laptop, tablet and phone">
+          <img class="stories-showcase__slide" src="images/showcase/CD-South-West.png" alt="C&amp;D South West website shown across desktop, laptop, tablet and phone">
+        </div>
+      </div>
+
+      <button type="button" class="stories-showcase__arrow stories-showcase__arrow--next" aria-label="Next projects">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="stories-showcase__dots" id="storiesShowcaseDots"></div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Success Stories): Case Studies
+       ========================================================================== -->
+  <section class="case-studies">
+    <div class="container">
+
+      <!-- Sonic Solutions -->
+      <div class="case-study">
+        <div>
+          <div class="case-study__video">
+            <iframe src="https://www.youtube.com/embed/h7kqboepz2E" title="Sonic Solutions Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Lead Generation</li>
+              <li>Content Marketing</li>
+              <li>LinkedIn &ldquo;Done For You&rdquo;</li>
+              <li>E-Mail Marketing</li>
+              <li>Advanced Insights &amp; Analytics</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/sonic-solutions-logo.png" alt="Sonic Solutions">
+          <div class="case-study__text">
+            <p>The UK&rsquo;s leading Industrial Parts Cleaning Company now has a website that is congruent with the quality of the service they provide. The initial website redevelopment was done within a very tight timeframe in order to support a wider and ongoing digital marketing plan which involves activity with Google Ads, Organic SEO and LinkedIn amongst others.</p>
+            <p>In a short period of time they&rsquo;ve gone from a few enquiries a week, to a few high quality enquiries a day making a meaningful difference to their business.</p>
+            <p class="case-study__quote">&ldquo;If you want the problem of how to deal with enquires, how to get to the next level, DGM will create them for you&rdquo;</p>
+          </div>
+          <a href="https://sonicsolutionsltd.com/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- UK Electrical Installations -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/uk-electrical-logo.png" alt="UK Electrical Installations">
+          <div class="case-study__text">
+            <p>Established in the mid nineties, UK Electrical Installations has evolved from a small electrical contracting business to designing and implementing electrical solutions for the world&rsquo;s most famous brands (one named after a piece of fruit another named after a famous South American river, amongst others).</p>
+            <p>They approached us to help them develop their brand identity, brand assets, website and content strategy to ensure their online presence is befitting their highly respected and trusted reputation as a leader in their sector.</p>
+            <p>Shortly after launch, Operations Director Debbie Fellows had this feedback from a candidate applying for a position at UK Electrical Installations&hellip;</p>
+            <p class="case-study__quote">&ldquo;This is the best website I&rsquo;ve ever seen. Whilst it&rsquo;s uber-modern and slick UK Electrical come across as a warm friendly company&rdquo;</p>
+          </div>
+          <a href="https://ukelectrical.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/showcase/UK-Electrical.png" alt="UK Electrical Installations website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Branding &amp; Identity</li>
+              <li>Website Development &amp; Design</li>
+              <li>Photography</li>
+              <li>Video Production</li>
+              <li>Content Marketing</li>
+              <li>Social Media</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCC Interiors -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/showcase/BLOCC-Interiors.png" alt="BLOCC Interiors website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Branding &amp; Identity</li>
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Content Marketing</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+              <li>E-Mail Marketing</li>
+              <li>CRM Set-up &amp; Management</li>
+              <li>Advanced Insights &amp; Analytics</li>
+              <li>Social Media Management</li>
+              <li>Coaching &amp; Consultancy</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/blocc-logo.png" alt="BLOCC Interiors">
+          <div class="case-study__text">
+            <p>BLOCC Interiors are the UK&rsquo;s leading interior design studio for national home builders, niche developers &amp; retirement property developers. They also work with select discerning private clients.</p>
+            <p>In the same way that their show home designs are critical in how effectively developers sell their properties, BLOCC&rsquo;s own online presence is critical in how effective they are in selling their interior design services and that&rsquo;s where we&rsquo;ve helped.</p>
+          </div>
+          <a href="https://blocc.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Beaumont TM -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/beaumont-logo.png" alt="Beaumont TM">
+          <div class="case-study__text">
+            <p>Europes largest supplier of barware are now on their 2nd website with us. The next time you&rsquo;re in a bar, restaurant or pub look out for their name on the spirit measures &amp; dispensers. 9 times out of 10 it&rsquo;s one of theirs. This website is content heavy and allows their wholesale customers to find exactly what they&rsquo;re after. Our digital marketing campaigns have enabled them promote specific lines of new products.</p>
+            <p>Referring to our Google Ads work, Director Nick DeBorde said&hellip;</p>
+            <p class="case-study__quote">&ldquo;Without that, we wouldn&rsquo;t be getting the sales&hellip; you get this plausibility, and you think these are the right guys and I&rsquo;ve never gone elsewhere&rdquo;</p>
+          </div>
+          <a href="https://beaumonttm.co.uk/products/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <div class="case-study__video">
+            <iframe src="https://www.youtube.com/embed/rcXlBKi2MAc" title="Beaumont TM Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Video Production</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Everquip -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/success-stories/everquip-media.png" alt="Everquip website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Branding &amp; Identity</li>
+              <li>Website Development &amp; Design</li>
+              <li>Google Ads</li>
+              <li>Content Marketing</li>
+              <li>Advanced Analytics &amp; Insights</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/everquip-logo.png" alt="Everquip Garage Equipment">
+          <div class="case-study__text">
+            <p>We fought hard to win this project having faced off against their incumbent agency. Being 2020 with the global pandemic upon us, it became obvious to Everquip that they couldn&rsquo;t settle for anything less than a professional and proactive approach to online sales &amp; marketing.</p>
+            <p>After 25 years of trading and since working with us Everquip are seeing their best-ever sales figures.</p>
+            <p class="case-study__quote">&ldquo;We&rsquo;re running at around ROI of 1800% which is fantastic, some of the leads we are getting are fantastic &ndash; which is, of course, is down to you and your teams work!&rdquo;</p>
+          </div>
+          <a href="https://inspectionpits.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Duomo UK -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/duomo-logo.png" alt="Duomo UK">
+          <div class="case-study__text">
+            <p>Duomo UK are a leading supplier of all manner of gas detection &amp; safety equipment which has applications across a vast number of sectors with all sorts of different customers.</p>
+            <p>They originally came to us to fix a few problems with their old website and had been told by their old developer that it wouldn&rsquo;t be possible to realise their vision of enabling customers to buy online without needing to speak to a member of staff over the phone.</p>
+            <p>Unphased, we took on the challenge of working with the Duomo team to organise their vast array of products, prices and shipping options resulting in a user friendly eCommerce website that has made life easier for both staff and customers alike.</p>
+          </div>
+          <a href="https://duomo.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/showcase/Duomo-UK.png" alt="Duomo UK website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>eCommerce</li>
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Content Marketing</li>
+              <li>Photography</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+              <li>Advanced Insights &amp; Analytics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waste Recycling Technologies (WRT) -->
+      <div class="case-study">
+        <div>
+          <div class="case-study__video">
+            <iframe src="https://www.youtube.com/embed/FmLYm9jNeOo" title="WRT Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Video Production</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+              <li>E-Mail Marketing</li>
+              <li>Advanced Insights &amp; Analytics</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/wrt-logo.png" alt="Waste Recycling Technologies Ltd">
+          <div class="case-study__text">
+            <p>Waste Recycling Technologies Ltd are the UK&rsquo;s leading authority and supplier of new &amp; used waste recycling equipment. Managing Director Steve needed an attractive website and platform that enables him to list and market his high ticket equipment which is updated regularly.</p>
+            <p>This calls for a dynamic and flexible website that enables its users to filter through listings and search for what they need in a user friendly way. This also demands a search engine marketing campaign that can keep pace with the regular website updates.</p>
+          </div>
+          <a href="https://wrtltd.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- QuTec Pershore -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/qutec-logo.png" alt="QuTec Metal Pressings & Fabrication Specialists">
+          <div class="case-study__text">
+            <p>Originally formed in 1971, CEO Greg Cunningham took over the business in 2014. He needed a new credible and visible brand created.</p>
+            <p class="case-study__quote">&ldquo;Our branding wasn&rsquo;t telling our customers or anyone what we were about and what we were offering&rdquo;</p>
+            <p>These brand assets have been put to great use both on and offline. With the prominent placement of the brand on their premises and vehicles being attributed to deals valued at over 6 figures.</p>
+            <p>With a solid brand, we&rsquo;ve been able to create a modern website and accompanying Google Ads campaign that sees a steady stream of valuable enquiries.</p>
+          </div>
+          <a href="https://qutecpershoreltd.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <div class="case-study__video">
+            <iframe src="https://www.youtube.com/embed/gQEcZCovpeU" title="QuTec Pershore Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Branding &amp; Logo Design</li>
+              <li>Website Development &amp; Design</li>
+              <li>Google Ads</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GainMore Solutions -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/showcase/GainMore-Solutions.png" alt="GainMore Solutions website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>Landing Page Development</li>
+              <li>Content Strategy</li>
+              <li>Photography</li>
+              <li>Google Ads</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/gainmore-logo-mark.png" alt="GainMore Solutions">
+          <div class="case-study__text">
+            <p>GainMore Solutions provide consultancy and support to businesses that want to increase sales, improve profits and minimise risk. It&rsquo;s difficult to offer that if you&rsquo;re not perceived as credible. In a world where everyone and their pet dog claims to be some form of business coach it&rsquo;s important that the legit ones like James from GainMore come across as such and that&rsquo;s why it was a pleasure to work with him on this website.</p>
+            <p class="case-study__quote">&ldquo;Superb business and some great people. The team at DGM have delivered me the ultimate service in my website, its branding and continue to amaze me with their ongoing support and drive to help me to grow my online presence. There is no doubt that these guys are experts in what they do &ndash; and building my website was not just about the look and feel, but started way before then, ensuring that it spoke in the right language and was targeting the ideal clients we were looking for. I have no problem in advocating for them and will be talking about them to my clients for a long time to come.&rdquo;</p>
+          </div>
+          <a href="https://gainmoresolutions.com/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Kitchen Doors & Worktops -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/kitchen-doors-logo.png" alt="Kitchen Doors & Worktops">
+          <div class="case-study__text">
+            <p>Operating in an extremely competitive b2c environment, Kitchen Doors &amp; Worktops needed to upgrade their online presence in order to make the most of the leads they&rsquo;re generating both on and offline in order to support their impressive growth.</p>
+            <p>This project requires a deep understanding of their various customers, what they search for and what information and communication methods they prefer. And so, we&rsquo;ve created a comprehensive inbound marketing system that generates a regular flow of leads. This system comprises of a dynamic website, Google Ads campaign, CRM, automated e-mail marketing follow-up and advanced analytics.</p>
+            <p class="case-study__quote">&ldquo;Having looked around for a while before making a decision, I felt these guys had a real interest in what I wanted to achieve, and a clear plan for helping me get there. They do what they promise and always seem really keen to ensure I am kept up to date on things as we progress&rdquo;</p>
+          </div>
+          <a href="https://doorsandworktops.com/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/success-stories/kitchen-doors-media.png" alt="Kitchen Doors & Worktops website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Content Marketing</li>
+              <li>CRM</li>
+              <li>E-Mail Marketing</li>
+              <li>Advanced Insights &amp; Analytics</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- C&D South West -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/showcase/CD-South-West.png" alt="C&amp;D South West website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/cd-south-west-logo.webp" alt="C&D South West">
+          <div class="case-study__text">
+            <p>A true family business, 3 generations deep. They&rsquo;ve been building their brand &amp; reputation since the 80s as a leading transport &amp; logistics business.</p>
+            <p>In the fast paced climate a business in this sector exists in (not least of which in these recent couple of years) they needed a web presence that&rsquo;s as dynamic as they are and that also maintained and built on their hard fought SEO presence.</p>
+          </div>
+          <a href="https://cdsw.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Area Pest Control (APC UK) -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/apc-logo.png" alt="Area Pest Control UK">
+          <div class="case-study__text">
+            <p>APC UK (Area Pest Control) wanted to ramp up their marketing efforts and their previous website wasn&rsquo;t optimised for conversions so we stepped in to consider buyer personas, locations served and future marketing plans.</p>
+            <p>The website now looks great, gets found easily and more importantly converts traffic into enquiries incredibly well.</p>
+          </div>
+          <a href="https://areapestcontrol.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/showcase/Area-Pest-Control.png" alt="Area Pest Control UK website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>Local SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Content Marketing</li>
+              <li>E-Mail Marketing</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accurate Laser Cutting -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/success-stories/accurate-laser-media.png" alt="Accurate Laser Cutting website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Google Ads</li>
+              <li>Lead Generation</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/accurate-laser-logo.png" alt="Accurate Laser Cutting">
+          <div class="case-study__text">
+            <p>Accurate Laser Cutting came to us with a dated website. Whilst they were doing well as a business, this wasn&rsquo;t reflected on the old site and there were opportunities to be leveraged through digital marketing.</p>
+            <p>They now have one of the best-looking websites in their industry, but more than that it effectively converts its visitors into qualified prospects at a higher than average rate.</p>
+            <p>We also run an effective Google Ads campaign that makes their phone ring and fills their inbox with enquiries on a daily basis. All of which is measured for proof of ROI.</p>
+          </div>
+          <a href="https://accurate-laser.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Raptor CSL -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/raptor-logo.png" alt="Raptor CSL">
+          <div class="case-study__text">
+            <p>Raptor are a programme management, business and technical consultancy working on some serious projects within some serious sectors such as defence, cyber security &amp; central government.</p>
+            <p>Unlike some of our other clients, this project wasn&rsquo;t centred around lead generation, but more so focused on ensuring that their brand and capabilities are represented properly to a variety of stakeholders.</p>
+          </div>
+          <a href="https://raptorcsl.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/success-stories/raptor-media.png" alt="Raptor CSL website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Applied Pumps -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/success-stories/applied-pumps-media.png" alt="Applied Pumps website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Branding &amp; Identity</li>
+              <li>Website Development &amp; Design</li>
+              <li>Google Ads</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/applied-pumps-logo.jpg" alt="Applied Pumps">
+          <div class="case-study__text">
+            <p>We&rsquo;ve been working with Applied Pumps for many years now and have been entrusted to ensure their brand, website and lead generation is on point and consistently creating opportunities for them.</p>
+          </div>
+          <a href="https://appliedpumps.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- WoodWool UK -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/woodwool-logo.png" alt="WoodWool UK">
+          <div class="case-study__text">
+            <p>WoodWool UK are the UK&rsquo;s leading manufacturer and supplier of wood wool packaging material and natural fire-lighters.</p>
+            <p>Supplying to some of the most prestigious and well-known brands and smaller individual users alike, they needed a robust eCommerce and marketing platform capable of servicing a wide range of users.</p>
+            <p class="case-study__quote">&ldquo;The ongoing sales and marketing support DGM gives us has literally added over &pound;500,000 in sales to the business and that&rsquo;s in the last two years alone. If you are looking for an agency that puts real care into your business as well as the work they deliver, I would highly recommend these guys&rdquo;</p>
+          </div>
+          <a href="https://woodwooluk.com/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/success-stories/woodwool-media.png" alt="WoodWool UK website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>eCommerce</li>
+              <li>Lead Generation</li>
+              <li>E-Mail Marketing</li>
+              <li>CRM Management</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- EasyTots -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/success-stories/easytots-media.png" alt="EasyTots website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>eCommerce</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/easytots-logo.png" alt="EasyTots">
+          <div class="case-study__text">
+            <p>EasyTots are an award-winning supplier of popular innovative baby-led weaning products and they have a large social media following.</p>
+            <p>We were tasked with developing their eCommerce website on a limited budget and needed to launch in time for owner Helen&rsquo;s appearance on Channel 4&rsquo;s &ldquo;Buy It Now&rdquo;. Helen went on to appear on the BBC&rsquo;s Dragon&rsquo;s Den and secured investment!</p>
+            <p class="case-study__quote">&ldquo;I can without hesitation fully recommend DGM for a re-vamp web design. The team were impeccably professional, accommodating and personable throughout. We turned my site around in a short deadline and DGM met all targets. I am delighted with the finished site. In fact since my site was redeveloped visitors have increased by 400%, sales have increased significantly and I&rsquo;m now capturing sales leads as well as giving a much better overall experience to my customers. Fab job, thank you!&rdquo;</p>
+          </div>
+          <a href="https://easytots.com/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- PSA UK -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/psa-logo.png" alt="PSA UK">
+          <div class="case-study__text">
+            <p>Founded in 1910 PSA have had over 100 years of experience in producing packaging machinery and now operate globally. We were tasked with creating an online presence for them as well as the design and implementation of both an inbound and outbound lead generation strategy.</p>
+          </div>
+          <a href="https://psangelus.uk.com/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/success-stories/psa-media.png" alt="PSA UK website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Design &amp; Development</li>
+              <li>Google Ads</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Content Marketing</li>
+              <li>E-Mail Marketing</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Face Envy -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__shot" src="images/success-stories/faceenvy-media.jpg" alt="Face Envy Aesthetics website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Website Development &amp; Design</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="case-study__logo" src="images/success-stories/faceenvy-logo.png" alt="Face Envy Aesthetics">
+          <div class="case-study__text">
+            <p>Having been referred to us from another happy client in the same industry Face Envy Aesthetics knew that we would be a good fit for them. They came to us with a poorly designed website that didn&rsquo;t reflect the quality of their work, and how consistently highly rated they are by their own customers.</p>
+            <p>We worked with a limited budget to create a fantastic design that now reflects the quality of business that they are which reassures their new customers and increases conversion.</p>
+          </div>
+          <a href="https://faceenvy.org/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Mr Tariq Miskry -->
+      <div class="case-study">
+        <div>
+          <img class="case-study__logo" src="images/success-stories/tariq-miskry-logo.png" alt="Mr Tariq Miskry">
+          <div class="case-study__text">
+            <p>Mr Miskry is one of Harley Street&rsquo;s most sought after private Obstetricians &amp; Gynaecologists. He came to us with a requirement to establish himself online as he had no prior exposure. His project required the creation of his own brand, logo design, a photoshoot, competitor research and on-site SEO to create a website that can be used to solicit enquiries and inform patients.</p>
+          </div>
+          <a href="https://tariqmiskry.co.uk/" class="btn btn--gold case-study__link" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+        <div>
+          <img class="case-study__shot" src="images/showcase/tariq-miskry.png" alt="Mr Tariq Miskry website shown across desktop, laptop, tablet and phone">
+          <div class="case-study__services">
+            <h3 class="case-study__services-heading">How we help&hellip;</h3>
+            <ul class="case-study__services-list">
+              <li>Branding &amp; Logo Design</li>
+              <li>Professional Photography</li>
+              <li>Website Development &amp; Design</li>
+              <li>SEO (Search Engine Optimisation)</li>
+              <li>Website Hosting, Support &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Reality Check CTA (Health Check variant)
+       Reused verbatim from support.html
+       ========================================================================== -->
+  <section class="reality reveal">
+    <div class="container">
+      <div class="reality__card">
+        <span class="reality__blob" aria-hidden="true"></span>
+
+        <div class="reality__content">
+          <h2 class="reality__heading">Take The SME Sales &amp; Marketing Health Check</h2>
+          <p class="reality__text">It takes most people less than 6 minutes to take our quiz which will give you a rapid yet accurate benchmark of your Sales &amp; Marketing effectiveness, and then instantly provide you with tailored and actionable insights to help you see your best ever results over the next 12 months.</p>
+          <a href="#contact" class="btn btn--gold">Start Your Health Check Now</a>
+        </div>
+
+        <div class="reality__media">
+          <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+            <iframe id="tolstoy" src="https://player.gotolstoy.com/655bwviilm8qu?host"
+                    style="width:100%;height:100%;max-width:100%"
+                    scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+            </iframe>
+            <script src="https://widget.gotolstoy.com/script.js" defer></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Why Work With Us
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="why reveal">
+    <div class="container">
+      <h2 class="why__heading">Why Work With Us?</h2>
+      <p class="why__subheading">We work with Owners, Directors or Marketing Managers of established UK based SME&rsquo;s that need better results from their online presence.</p>
+    </div>
+
+    <div class="why__slider-wrap">
+      <button class="why__arrow why__arrow--prev" id="whyPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="why__slider container">
+        <div class="why__track" id="whyTrack">
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V16.5C7 15.4 6 13.6 6 11.5C6 8 8.7 5 12 5C15.3 5 18 8 18 11.5C18 13.6 17 15.4 15 16.5V18H9Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 18V19.5C9 20.3 9.7 21 10.5 21H13.5C14.3 21 15 20.3 15 19.5V18" stroke="currentColor" stroke-width="1.4"/><path d="M4 9L5.5 9.5M20 9L18.5 9.5M12 3V4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Knowledge &amp; Experience</h3>
+            <p class="why__card-text">We&rsquo;ve been going for over 15 years (est 2008) and have experience working with a wide range of businesses, organisations and industries. We&rsquo;re not hobbyists chancing it on your dime. You will benefit from our hard earned experience &amp; insight.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 19L7 12L11 15L2 19Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M22 19L17 12L13 15L22 19Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 6L12 3L15 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Easy To Work With</h3>
+            <p class="why__card-text">We&rsquo;re &ldquo;people&rdquo; people. Strategy, knowledge and experience counts for nothing if you can&rsquo;t communicate or work openly and effectively which is something we pride ourselves in. We build strong friendly &amp; transparent relationships with our clients.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M7.5 15.5V12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 15.5V8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M16.5 15.5V10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Results Driven</h3>
+            <p class="why__card-text">We establish and measure the success of a project against mutually agreed metrics, whether it be an increase in visitors, a higher conversion rate, or an enhanced feeling towards your brand. Whatever they are, we think about it in everything that we do so that at the end of project we all know it&rsquo;s a success.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7L7 8.5L9 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M15.5 4.5L18.5 7.5M18.5 4.5L15.5 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M17 14L20.5 17.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M14.5 15.5C14.5 15.5 15.5 21 20 20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Discernment</h3>
+            <p class="why__card-text">We don&rsquo;t say yes to every project that comes our way preferring only to work passionately and enthusiastically with people on projects where we can make a real tangible difference.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 15 5 13 7 13C9 13 10 15 12 15C14 15 15 13 17 13C19 13 21 15 21 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><path d="M12 6.5V9.5M10.7 8H13.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M4 19H20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Great Value</h3>
+            <p class="why__card-text">We&rsquo;re not the cheapest option, but few can deliver value or a return on investment like we can. Our clients find our honest and transparent approach to creating a project scope and quoting for a project refreshing.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L21 8L12 12L3 8L12 4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 10.5V15C7 15 9 17 12 17C15 17 17 15 17 15V10.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M21 8V13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">We Never Stop Learning</h3>
+            <p class="why__card-text">Our ability to deliver results is our ability to make a living and we never stop investing our time and money into learning new skills and strategies that our clients can benefit from.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3.5H16L15 6H9L8 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><rect x="6" y="6" width="12" height="15" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 11L11 13L15.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Processes &amp; Systems</h3>
+            <p class="why__card-text">Over the years we&rsquo;ve honed and refined our project management processes. The way in which we manage projects is unique to us and delivers the highest standard of work in the quickest possible way whilst keeping our clients informed every step of the way.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M10 19H14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 3C8.5 3 6.5 5.5 6.5 8.5C6.5 10.8 7.8 12 9 13.2C9.6 13.8 10 14.6 10 15.5H14C14 14.6 14.4 13.8 15 13.2C16.2 12 17.5 10.8 17.5 8.5C17.5 5.5 15.5 3 12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M18.5 6.5L20.5 5.5M18.5 10.5L20.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Creativity</h3>
+            <p class="why__card-text">We take great pride in designing contemporary, user-friendly websites, that represent our clients in the best possible light but thinking creatively isn&rsquo;t only limited to graphic design it&rsquo;s something we apply to every discipline.</p>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="why__arrow why__arrow--next" id="whyNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Let's Have a Chat
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="chat-cta reveal">
+    <div class="chat-cta__decor" aria-hidden="true">
+      <img class="chat-cta__blob chat-cta__blob--1" src="images/sections/chat-cta-blob-1.png" alt="">
+      <img class="chat-cta__blob chat-cta__blob--2" src="images/sections/chat-cta-blob-2.png" alt="">
+      <img class="chat-cta__photo" src="images/sections/chat-cta-photo.png" alt="Two DGM team members in yellow branded hoodies">
+    </div>
+
+    <div class="container chat-cta__inner">
+      <div class="chat-cta__spacer" aria-hidden="true"></div>
+      <div class="chat-cta__content">
+        <h2 class="chat-cta__heading">Let&rsquo;s Have a Chat</h2>
+        <p class="chat-cta__text">Click the button below to find a free slot in our calendar to discuss how we can help you achieve your sales &amp; marketing goals.<br>Or call our office on <strong>0121 224 7412</strong></p>
+        <a href="#contact" class="btn btn--gold chat-cta__cta">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Schedule a Zoom call
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================================
        GLOBAL: Footer
