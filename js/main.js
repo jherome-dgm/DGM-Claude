@@ -5,7 +5,60 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhySlider();
   initStickyHeader();
   initScrollReveal();
+  initMobileNav();
 });
+
+function initMobileNav() {
+  const headerInner = document.querySelector('.site-header__inner');
+  const nav = document.querySelector('.main-nav');
+  if (!headerInner || !nav) return;
+
+  const mobileQuery = window.matchMedia('(max-width: 980px)');
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'nav-toggle';
+  toggle.setAttribute('aria-label', 'Toggle menu');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML = '<span></span><span></span><span></span>';
+  headerInner.appendChild(toggle);
+
+  function closeNav() {
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-active');
+    toggle.setAttribute('aria-expanded', 'false');
+    nav.querySelectorAll('.has-dropdown.is-open').forEach((li) => li.classList.remove('is-open'));
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-active', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  nav.querySelectorAll('li.has-dropdown > a').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (!mobileQuery.matches) return;
+      event.preventDefault();
+      const parentLi = link.parentElement;
+      const isOpen = parentLi.classList.toggle('is-open');
+
+      parentLi.parentElement.querySelectorAll(':scope > li.has-dropdown').forEach((li) => {
+        if (li !== parentLi) li.classList.remove('is-open');
+      });
+
+      void isOpen;
+    });
+  });
+
+  nav.querySelectorAll('li:not(.has-dropdown) > a, .main-nav__dropdown-menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mobileQuery.matches) closeNav();
+    });
+  });
+
+  mobileQuery.addEventListener('change', () => closeNav());
+}
 
 function initScrollReveal() {
   const targets = document.querySelectorAll('.reveal');
