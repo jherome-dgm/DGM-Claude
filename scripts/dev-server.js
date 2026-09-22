@@ -18,6 +18,8 @@ const mime = {
   '.ico': 'image/x-icon',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
+  '.xml': 'application/xml',
+  '.txt': 'text/plain',
 };
 
 function serveFile(filePath, res) {
