@@ -35,7 +35,7 @@
   <!-- ==========================================================================
        GLOBAL: Header / Main Navigation
        ========================================================================== -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header site-header--overlay" id="siteHeader">
     <div class="site-header__inner">
       <a href="/" class="logo">
         <img class="logo__mark" src="images/brand/dgm-logo.png" alt="DGM">
@@ -57,8 +57,8 @@
               </ul>
             </div>
           </li>
-          <li class="has-dropdown">
-            <a href="/digital-marketing-services">Digital Marketing Services
+          <li class="has-dropdown is-active">
+            <a href="/digital-marketing-services" aria-current="page">Digital Marketing Services
               <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <div class="main-nav__dropdown">
@@ -79,14 +79,476 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (Digital Marketing Services): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (Digital Marketing Services): Hero
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">Digital Marketing Services — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Award Winning Digital Marketing Services</p>
+          <h1 class="hero__heading">Stop Leaving Money on the <span class="text-accent">Table</span></h1>
+          <p class="hero__text">Digital Marketing Companies in Birmingham are ten a penny these days, the key is to find one that values meaningful outcomes like <span class="hero__typed" id="heroTypedWord" data-words='["love", "Increased Traffic", "Better Conversion Rates", "Higher Sales Revenues", "Qualified Prospects"]'></span><span class="hero__cursor"></span></p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Request a Free Expert Review</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video">
+            <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
+              <iframe id="tolstoy" src="https://player.gotolstoy.com/urffj3o18jy7k?host"
+                      style="width:100%;height:100%;max-width:100%"
+                      scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
+              </iframe>
+              <script src="https://widget.gotolstoy.com/script.js" defer></script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Digital Marketing Services): Services intro
+       ========================================================================== -->
+  <section class="dm-services reveal">
+    <div class="container dm-services__inner">
+
+      <div class="dm-services__content">
+        <h2 class="dm-services__heading">Digital Marketing Services Birmingham</h2>
+        <p>We offer a range of digital marketing services that include but aren't limited to&hellip;</p>
+
+        <ul class="dm-services__list">
+          <li>Google Ads Management (Pay-Per-Click Advertising)</li>
+          <li>SEO (Search Engine Optimisation)</li>
+          <li>Landing Page Creation &amp; Conversion Rate Optimisation</li>
+          <li>E-Mail Marketing</li>
+          <li><em>&ldquo;Done For You&rdquo;</em>LinkedIn Campaigns</li>
+          <li>Facebook Ads Management</li>
+          <li>Social Media</li>
+          <li>Content Marketing</li>
+        </ul>
+
+        <p>&hellip;for businesses, organisations &amp; individuals that are serious about consistently attracting new business from qualified prospects.</p>
+        <p>You may need our help with all or just some of these things, but it starts by establishing clear &amp; realistic objectives (<em>e.g. 5 new business enquiries per working day</em>) and using our experience and expertise to determine the most effective way forward for you whilst being careful to sense check it against the resources (people, time and money) available to get the job done.</p>
+
+        <div class="dm-services__buttons">
+          <a href="#contact" class="btn btn--gold">Request my FREE Expert Review Now</a>
+          <a href="/success-stories" class="btn btn--gold">View our work</a>
+        </div>
+      </div>
+
+      <div class="dm-services__media">
+        <img src="images/sections/dgm-customer-journey.gif" alt="Customer journey: Strangers become Visitors (Find You), then Leads (Trust You), then Customers (Choose You), then Promoters (Promote You)">
+        <p>We won't mindlessly waste your money or indulge in pointless or risky campaigns that don't have a clear return on investment. At Digital Group Media we'll only take on digital marketing work once we're all confident that we can deliver results that matter.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Digital Marketing Services): Client understanding
+       ========================================================================== -->
+  <section class="dm-clients reveal">
+    <div class="container dm-clients__inner">
+
+      <div class="dm-clients__media">
+        <img src="images/sections/award-winning-web-design-development.jpg" alt="Two DGM team members sitting with a National Business Award trophy">
+      </div>
+
+      <div class="dm-clients__content">
+        <p><strong>Our clients come to us with a wide range of digital marketing knowledge, experience and the desire to get involved in any campaign fulfilment themselves.  For us, there's no right or wrong, so long as we can be clear on what we need to achieve for you.</strong></p>
+        <p>Half the battle for some clients is confidently understanding what meaningful outcomes for them are, and often for the 1st time. Once this is understood, then we can help you determine the best digital marketing strategies to action.</p>
+        <p>You shouldn't be running any sort of digital marketing like a Google Ads or an SEO campaign just because someone said <em>"it's the done thing."</em> A campaign should be tied to a specific desirable outcome that is understood, invested in properly, and then measured for success.</p>
+        <p>In short, we set out to understand how those that could buy from you, think, behave &amp; hang out online, start a dialogue with them, nurture that relationship throughout their buying cycles so that they understand &amp; trust how you can solve problems for them with your products or services, and then ensure that they become customers and champions of your business.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Recent Work
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="portfolio reveal">
+    <div class="portfolio__grid">
+
+      <div class="portfolio-text portfolio-text--intro">
+        <h2 class="portfolio-text__heading">RECENT<br>WORK</h2>
+        <a href="/success-stories" class="portfolio-text__link">View Success Stories</a>
+      </div>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/uk-electrical-installations.png" alt="UK Electrical Installations">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">UK Electrical Installations</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/sonic-solutions.jpg" alt="Sonic Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Sonic Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/blocc-interiors.jpg" alt="BLOCC Interiors">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">BLOCC Interiors</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/everquip.png" alt="Everquip">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Everquip</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/duomo-uk.png" alt="Duomo UK">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">Duomo UK</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/qutec.png" alt="QuTec">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">QuTec</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/cd-southwest.png" alt="C&amp;D South West">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">C&amp;D South West</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <a href="#" class="portfolio-item" title="Project link needed">
+        <img class="portfolio-item__photo" src="images/portfolio/gainmore-solutions.png" alt="GainMore Solutions">
+        <div class="portfolio-item__overlay">
+          <h3 class="portfolio-item__title">GainMore Solutions</h3>
+          <span class="portfolio-item__link">View Project</span>
+        </div>
+      </a>
+
+      <div class="portfolio-text portfolio-text--outro">
+        <h2 class="portfolio-text__heading">YOU<br>NEXT?</h2>
+        <a href="#contact" class="portfolio-text__link">Get in Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Digital Marketing Services): Some of our tools
+       ========================================================================== -->
+  <section class="dm-tools reveal">
+    <div class="container">
+      <h2 class="dm-tools__heading">Some of our tools</h2>
+
+      <div class="dm-tools__grid">
+        <div class="dm-tools__item"><img src="images/tools/google-ads.jpg" alt="Google Ads"></div>
+        <div class="dm-tools__item"><img src="images/tools/facebook-ads.jpg" alt="Facebook Ads"></div>
+        <div class="dm-tools__item"><img src="images/tools/linkedin.jpg" alt="LinkedIn"></div>
+        <div class="dm-tools__item"><img src="images/tools/activecampaign.jpg" alt="ActiveCampaign"></div>
+        <div class="dm-tools__item"><img src="images/tools/wordpress.jpg" alt="WordPress"></div>
+        <div class="dm-tools__item"><img src="images/tools/mailchimp.jpg" alt="Mailchimp"></div>
+        <div class="dm-tools__item"><img src="images/tools/hotjar.png" alt="Hotjar"></div>
+        <div class="dm-tools__item"><img src="images/tools/zapier.jpg" alt="Zapier"></div>
+        <div class="dm-tools__item"><img src="images/tools/swydo.jpg" alt="Swydo"></div>
+        <div class="dm-tools__item"><img src="images/tools/callrail.jpg" alt="CallRail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Why Work With Us
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="why reveal">
+    <div class="container">
+      <h2 class="why__heading">Why Work With Us?</h2>
+      <p class="why__subheading">We work with Owners, Directors or Marketing Managers of established UK based SME&rsquo;s that need better results from their online presence.</p>
+    </div>
+
+    <div class="why__slider-wrap">
+      <button class="why__arrow why__arrow--prev" id="whyPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="why__slider container">
+        <div class="why__track" id="whyTrack">
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V16.5C7 15.4 6 13.6 6 11.5C6 8 8.7 5 12 5C15.3 5 18 8 18 11.5C18 13.6 17 15.4 15 16.5V18H9Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 18V19.5C9 20.3 9.7 21 10.5 21H13.5C14.3 21 15 20.3 15 19.5V18" stroke="currentColor" stroke-width="1.4"/><path d="M4 9L5.5 9.5M20 9L18.5 9.5M12 3V4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Knowledge &amp; Experience</h3>
+            <p class="why__card-text">We&rsquo;ve been going for over 15 years (est 2008) and have experience working with a wide range of businesses, organisations and industries. We&rsquo;re not hobbyists chancing it on your dime. You will benefit from our hard earned experience &amp; insight.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 19L7 12L11 15L2 19Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M22 19L17 12L13 15L22 19Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 6L12 3L15 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Easy To Work With</h3>
+            <p class="why__card-text">We&rsquo;re &ldquo;people&rdquo; people. Strategy, knowledge and experience counts for nothing if you can&rsquo;t communicate or work openly and effectively which is something we pride ourselves in. We build strong friendly &amp; transparent relationships with our clients.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M7.5 15.5V12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 15.5V8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M16.5 15.5V10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Results Driven</h3>
+            <p class="why__card-text">We establish and measure the success of a project against mutually agreed metrics, whether it be an increase in visitors, a higher conversion rate, or an enhanced feeling towards your brand. Whatever they are, we think about it in everything that we do so that at the end of project we all know it&rsquo;s a success.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7L7 8.5L9 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M15.5 4.5L18.5 7.5M18.5 4.5L15.5 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M17 14L20.5 17.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M14.5 15.5C14.5 15.5 15.5 21 20 20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Discernment</h3>
+            <p class="why__card-text">We don&rsquo;t say yes to every project that comes our way preferring only to work passionately and enthusiastically with people on projects where we can make a real tangible difference.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 15 5 13 7 13C9 13 10 15 12 15C14 15 15 13 17 13C19 13 21 15 21 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><path d="M12 6.5V9.5M10.7 8H13.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M4 19H20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Great Value</h3>
+            <p class="why__card-text">We&rsquo;re not the cheapest option, but few can deliver value or a return on investment like we can. Our clients find our honest and transparent approach to creating a project scope and quoting for a project refreshing.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L21 8L12 12L3 8L12 4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 10.5V15C7 15 9 17 12 17C15 17 17 15 17 15V10.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M21 8V13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">We Never Stop Learning</h3>
+            <p class="why__card-text">Our ability to deliver results is our ability to make a living and we never stop investing our time and money into learning new skills and strategies that our clients can benefit from.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M10 19H14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 3C8.5 3 6.5 5.5 6.5 8.5C6.5 10.8 7.8 12 9 13.2C9.6 13.8 10 14.6 10 15.5H14C14 14.6 14.4 13.8 15 13.2C16.2 12 17.5 10.8 17.5 8.5C17.5 5.5 15.5 3 12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M18.5 6.5L20.5 5.5M18.5 10.5L20.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Processes &amp; Systems</h3>
+            <p class="why__card-text">Over the years we&rsquo;ve honed and refined our project management processes. The way in which we manage projects is unique to us and delivers the highest standard of work in the quickest possible way whilst keeping our clients informed every step of the way.</p>
+          </article>
+
+          <article class="why__card">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M10 19H14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 3C8.5 3 6.5 5.5 6.5 8.5C6.5 10.8 7.8 12 9 13.2C9.6 13.8 10 14.6 10 15.5H14C14 14.6 14.4 13.8 15 13.2C16.2 12 17.5 10.8 17.5 8.5C17.5 5.5 15.5 3 12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M18.5 6.5L20.5 5.5M18.5 10.5L20.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="why__card-title">Creativity</h3>
+            <p class="why__card-text">We take great pride in designing contemporary, user-friendly websites, that represent our clients in the best possible light but thinking creatively isn&rsquo;t only limited to graphic design it&rsquo;s something we apply to every discipline.</p>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="why__arrow why__arrow--next" id="whyNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Trusted By
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="trusted reveal">
+    <div class="container">
+      <h2 class="trusted__heading">Trusted by</h2>
+    </div>
+
+    <div class="trusted__marquee">
+      <div class="trusted__track">
+        <div class="trusted__group">
+          <img src="images/trusted-logos/accurate-laser-log-1.png" alt="Accurate Laser">
+          <img src="images/trusted-logos/APC-Logo-2019-Copy-1.png" alt="APC">
+          <img src="images/trusted-logos/appliedpumps-logo-1.png" alt="Applied Pumps">
+          <img src="images/trusted-logos/Beaumont-Logo-white-text.png" alt="Beaumont">
+          <img src="images/trusted-logos/Blocc-Interiors-Logo.png" alt="Blocc Interiors">
+          <img src="images/trusted-logos/cd.png" alt="CD">
+          <img src="images/trusted-logos/Duomo-UK-1-1.png" alt="Duomo UK">
+          <img src="images/trusted-logos/EasyTots-Logo-MASTER-Colour-1.png" alt="EasyTots">
+          <img src="images/trusted-logos/face-envy-1.png" alt="Face Envy">
+          <img src="images/trusted-logos/gainmore-logo.png" alt="Gainmore">
+          <img src="images/trusted-logos/kitchen-doors-worktops-logo-1.png" alt="Kitchen Doors &amp; Worktops">
+          <img src="images/trusted-logos/logo-Mr-Tariq-Miskry-v3-1.png" alt="Mr Tariq Miskry">
+          <img src="images/trusted-logos/logoQT-inverted-colors-v3-1.png" alt="QT">
+          <img src="images/trusted-logos/psa-uk-logo-1.png" alt="PSA UK">
+          <img src="images/trusted-logos/Raptor-Logo_Colour-1.png" alt="Raptor">
+          <img src="images/trusted-logos/Sonic-Solutions-Industrial-Parts-Cleaning-1.png" alt="Sonic Solutions">
+          <img src="images/trusted-logos/UK-Electrical-Instalaltions-1.png" alt="UK Electrical Installations">
+          <img src="images/trusted-logos/woodwool-uk-logo-1.png" alt="Woodwool UK">
+          <img src="images/trusted-logos/WRT-Logo-2020-1.png" alt="WRT">
+          <img src="images/trusted-logos/everquip-logo-version-2.png" alt="Everquip">
+        </div>
+        <div class="trusted__group" aria-hidden="true">
+          <img src="images/trusted-logos/accurate-laser-log-1.png" alt="">
+          <img src="images/trusted-logos/APC-Logo-2019-Copy-1.png" alt="">
+          <img src="images/trusted-logos/appliedpumps-logo-1.png" alt="">
+          <img src="images/trusted-logos/Beaumont-Logo-white-text.png" alt="">
+          <img src="images/trusted-logos/Blocc-Interiors-Logo.png" alt="">
+          <img src="images/trusted-logos/cd.png" alt="">
+          <img src="images/trusted-logos/Duomo-UK-1-1.png" alt="">
+          <img src="images/trusted-logos/EasyTots-Logo-MASTER-Colour-1.png" alt="">
+          <img src="images/trusted-logos/face-envy-1.png" alt="">
+          <img src="images/trusted-logos/gainmore-logo.png" alt="">
+          <img src="images/trusted-logos/kitchen-doors-worktops-logo-1.png" alt="">
+          <img src="images/trusted-logos/logo-Mr-Tariq-Miskry-v3-1.png" alt="">
+          <img src="images/trusted-logos/logoQT-inverted-colors-v3-1.png" alt="">
+          <img src="images/trusted-logos/psa-uk-logo-1.png" alt="">
+          <img src="images/trusted-logos/Raptor-Logo_Colour-1.png" alt="">
+          <img src="images/trusted-logos/Sonic-Solutions-Industrial-Parts-Cleaning-1.png" alt="">
+          <img src="images/trusted-logos/UK-Electrical-Instalaltions-1.png" alt="">
+          <img src="images/trusted-logos/woodwool-uk-logo-1.png" alt="">
+          <img src="images/trusted-logos/WRT-Logo-2020-1.png" alt="">
+          <img src="images/trusted-logos/everquip-logo-version-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Reality Check CTA
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="reality reveal">
+    <div class="container">
+      <div class="reality__card">
+        <span class="reality__blob" aria-hidden="true"></span>
+
+        <div class="reality__content">
+          <h2 class="reality__heading">See What&rsquo;s Really Holding Your Sales &amp; Marketing Back&hellip;</h2>
+          <p class="reality__text">Get a clear, honest view of what&rsquo;s working, what isn&rsquo;t, and where the real opportunities are for growth over the next 12 months <strong>FOR FREE</strong> <em>(Most agencies charge &pound;2,000+ for this level of insight and clarity)</em></p>
+          <a href="#contact" class="btn btn--gold">Start Your Reality Check Now</a>
+        </div>
+
+        <div class="reality__media">
+          <iframe class="reality__iframe" allowtransparency="true" src="https://adilo.bigcommand.com/watch/Oq86KQI1" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Client Testimonials
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="testimonials reveal">
+    <div class="container">
+      <h2 class="testimonials__heading">What Our Clients Say About Us</h2>
+
+      <div class="testimonials__grid">
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rhmNgWd2NWI" title="Gurdip.co.uk Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/h7kqboepz2E" title="Sonic Solutions Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/rcXlBKi2MAc" title="Beaumont TM Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testimonials__video">
+          <iframe src="https://www.youtube.com/embed/4m2zeAK1ZBc" title="room44 Testimonial for Digital Group Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a href="/success-stories" class="btn btn--gold testimonials__cta">See More Success Stories</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL: Let's Have a Chat
+       Reused verbatim from homepage.
+       ========================================================================== -->
+  <section class="chat-cta reveal">
+    <div class="chat-cta__decor" aria-hidden="true">
+      <img class="chat-cta__blob chat-cta__blob--1" src="images/sections/chat-cta-blob-1.png" alt="">
+      <img class="chat-cta__blob chat-cta__blob--2" src="images/sections/chat-cta-blob-2.png" alt="">
+      <img class="chat-cta__photo" src="images/sections/chat-cta-photo.png" alt="Two DGM team members in yellow branded hoodies">
+    </div>
+
+    <div class="container chat-cta__inner">
+      <div class="chat-cta__spacer" aria-hidden="true"></div>
+      <div class="chat-cta__content">
+        <h2 class="chat-cta__heading">Let&rsquo;s Have a Chat</h2>
+        <p class="chat-cta__text">Click the button below to find a free slot in our calendar to discuss how we can help you achieve your sales &amp; marketing goals.<br>Or call our office on <strong>0121 224 7412</strong></p>
+        <a href="#contact" class="btn btn--gold chat-cta__cta">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Schedule a Zoom call
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================================
        GLOBAL: Footer

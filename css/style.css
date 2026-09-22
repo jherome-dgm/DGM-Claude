@@ -2356,6 +2356,206 @@ body {
 }
 
 /* ==========================================================================
+   Page-specific (Digital Marketing Services): Services intro
+   ========================================================================== */
+
+.dm-services {
+  background: #ffffff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.dm-services__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+.dm-services__heading {
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-pink);
+  margin-bottom: 20px;
+}
+
+.dm-services__content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dm-services__content p em {
+  font-style: italic;
+}
+
+.dm-services__list {
+  margin-bottom: 20px;
+}
+
+.dm-services__list li {
+  position: relative;
+  padding-left: 20px;
+  font-weight: 700;
+  color: var(--color-pink);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.dm-services__list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 2px;
+  color: var(--color-pink);
+}
+
+.dm-services__list li em {
+  font-style: italic;
+}
+
+.dm-services__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.dm-services__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.dm-services__media p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .dm-services__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .dm-services__content {
+    text-align: center;
+  }
+
+  .dm-services__list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .dm-services__buttons {
+    justify-content: center;
+  }
+
+  .dm-services__media {
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Digital Marketing Services): Client understanding
+   ========================================================================== */
+
+.dm-clients {
+  background: #F5F5F6;
+  padding: clamp(50px, 6vw, 80px) 0;
+}
+
+.dm-clients__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 480px) 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+.dm-clients__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dm-clients__content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dm-clients__content p:last-child {
+  margin-bottom: 0;
+}
+
+.dm-clients__content p em {
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .dm-clients__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ==========================================================================
+   Page-specific (Digital Marketing Services): Some of our tools
+   ========================================================================== */
+
+.dm-tools {
+  background: #ffffff;
+  padding: clamp(50px, 6vw, 80px) 0;
+}
+
+.dm-tools__heading {
+  text-align: center;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+
+.dm-tools__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(24px, 3vw, 40px) clamp(16px, 3vw, 32px);
+  align-items: center;
+  justify-items: center;
+}
+
+.dm-tools__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+}
+
+.dm-tools__item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 860px) {
+  .dm-tools__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .dm-tools__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
    Global: Buttons — full-width on small screens
    Placed last so it wins over earlier same-specificity *__cta width rules.
    ========================================================================== */
