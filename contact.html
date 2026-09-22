@@ -78,14 +78,155 @@
   </header>
 
   <!-- ==========================================================================
-       PAGE-SPECIFIC (Contact): sections go here
-       Waiting on screenshots — see memory: project_site_map
+       PAGE-SPECIFIC (Contact)
        ========================================================================== -->
-  <main class="page-placeholder">
-    <div class="container">
-      <p style="padding: 120px 0; text-align: center; color: #999;">Contact — sections coming soon.</p>
+  <section class="hero reveal">
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 900 950" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="transparent"/>
+            <rect width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+          </pattern>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF7A1A"/>
+            <stop offset="100%" stop-color="#FFA22C"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#waveGradient)"/>
+        <path d="M120,0 C420,40 520,180 560,340 C610,540 500,650 620,820 C700,930 850,950 900,950 L900,0 Z" fill="url(#stripes)"/>
+      </svg>
+
+      <span class="hero__circle hero__circle--1"></span>
+      <span class="hero__dot hero__dot--1"></span>
+      <span class="hero__circle hero__circle--2"></span>
+      <span class="hero__dot hero__dot--2"></span>
+      <span class="hero__plus" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4V28M4 16H28" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
     </div>
-  </main>
+
+    <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Award Winning Web Design &amp; Digital Marketing Services</p>
+          <h1 class="hero__heading">Contact <span class="text-accent">Digital Group Media</span></h1>
+          <p class="hero__text">We guide you through the process of creating a successful &amp; attractive brand online that people&hellip; <span class="hero__typed" id="heroTypedWord" data-words='["love", "buy from", "understand", "respect", "learn from", "find"]'></span><span class="hero__cursor"></span></p>
+
+          <div class="hero__rating">
+            <span class="hero__rating-label">Rated Excellent</span>
+            <span class="hero__stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="#FFC629" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.6 6.5L19.5 7.1L14.3 11.7L15.9 18.5L10 14.9L4.1 18.5L5.7 11.7L0.5 7.1L7.4 6.5L10 0Z"/></svg>
+            </span>
+            <span class="hero__rating-score">4.9 out of 5</span>
+            <span class="hero__google" aria-label="Google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 34.8 24 34.8c-6 0-10.9-4.9-10.9-10.9S18 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6 13.9 5.6 5.6 13.9 5.6 24S13.9 42.4 24 42.4 42.4 34.1 42.4 24c0-1.2-.1-2.3-.3-3.5z"/><path fill="#FF3D00" d="M8.3 14.7l5.9 4.3C15.7 15.7 19.5 13 24 13c2.7 0 5.2 1 7.1 2.7l5.1-5.1C32.9 7.5 28.7 5.6 24 5.6c-7 0-13 4-15.7 9.1z"/><path fill="#4CAF50" d="M24 42.4c4.6 0 8.7-1.8 11.9-4.6l-5.5-4.6c-1.8 1.4-4 2.2-6.4 2.2-5.3 0-9.7-2.8-11.4-7.4l-5.9 4.5C9.1 38.5 16 42.4 24 42.4z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.3 5.6l5.5 4.6C40.2 34.9 42.4 29.9 42.4 24c0-1.2-.1-2.3-.3-3.5z"/></svg>
+              Google
+            </span>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--gold">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 2V4.5M14 2V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Book a Call
+            </a>
+            <a href="#contact" class="btn btn--white">Request a free expert review</a>
+          </div>
+
+          <ul class="hero__badges">
+            <li class="hero__badge"><img src="images/badges/google-partner.png" alt="Google Partner"></li>
+            <li class="hero__badge"><img src="images/badges/award-winner-2020.png" alt="Best Business Enabler Winner 2020"></li>
+            <li class="hero__badge"><img src="images/badges/award-finalist-2022.png" alt="Best Business Enabler Finalist 2022"></li>
+            <li class="hero__badge hero__badge--placeholder" title="Entrepreneurs Circle logo — asset needed">Entrepreneurs Circle</li>
+            <li class="hero__badge"><img src="images/badges/the-business-desk.png" alt="The Business Desk"></li>
+            <li class="hero__badge"><img src="images/badges/policybee.png" alt="PolicyBee - Professionally Insured"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__video hero__video--poster" data-embed-src="https://www.youtube.com/embed/UmB70UjzLO0" data-embed-title="Contact Digital Group Media">
+            <img class="hero__video-poster" src="images/sections/james-healthcheck.jpg" alt="Contact Digital Group Media video">
+            <button type="button" class="hero__video-play" aria-label="Play video">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5V18.5L19 12L8 5.5Z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE-SPECIFIC (Contact): Contact Form
+       ========================================================================== -->
+  <section class="contact-form reveal" id="contact">
+    <div class="container contact-form__grid">
+
+      <form class="contact-form__form" action="#" method="post">
+        <div class="contact-form__field">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="contact-form__field">
+          <input type="text" name="company" placeholder="Company or Organization">
+        </div>
+        <div class="contact-form__field">
+          <input type="tel" name="phone" placeholder="Best Contact Number">
+        </div>
+        <div class="contact-form__field">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="contact-form__field">
+          <input type="text" name="website" placeholder="Your Current Website (if applicable)">
+        </div>
+        <div class="contact-form__field">
+          <textarea name="message" placeholder="How can we help you?" rows="5"></textarea>
+        </div>
+
+        <div class="contact-form__confirmation">
+          <h3 class="contact-form__confirmation-heading">Confirmation</h3>
+          <label class="contact-form__checkbox">
+            <input type="checkbox" name="privacy" required>
+            <span>Yes, I have read and agree to the terms of the <a href="/privacy-policy">Privacy Statement</a> (required)</span>
+          </label>
+          <label class="contact-form__checkbox">
+            <input type="checkbox" name="updates">
+            <span>Yes, please keep me updated on DGM news, events &amp; services</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--gold contact-form__submit">Submit</button>
+      </form>
+
+      <div class="contact-form__address">
+        <h2 class="contact-form__heading">Address</h2>
+        <p>
+          <strong>Digital Group Media Limited</strong><br>
+          305 The Greenhouse<br>
+          The Custard Factory<br>
+          Gibb Street<br>
+          Birmingham<br>
+          B9 4DP
+        </p>
+        <p>
+          Tel: <a href="tel:01212247412">0121 224 7412</a><br>
+          <a href="mailto:hello@digitalgroupmedia.com">hello@digitalgroupmedia.com</a>
+        </p>
+        <p>
+          <strong>Support Customer?</strong><br>
+          <a href="mailto:support@digitalgroupmedia.com">support@digitalgroupmedia.com</a>
+        </p>
+        <a href="#contact" class="btn btn--gold">Let&rsquo;s Talk</a>
+      </div>
+
+      <div class="contact-form__map">
+        <iframe src="https://www.google.com/maps?q=Digital+Group+Media,+305+Gibb+Street,+The+Custard+Factory,+Birmingham+B9+4DP&output=embed" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Digital Group Media location on Google Maps"></iframe>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ==========================================================================
        GLOBAL: Footer
