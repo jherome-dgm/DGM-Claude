@@ -2175,8 +2175,18 @@ body {
 .maint-intro__inner {
   display: grid;
   grid-template-columns: minmax(0, 480px) 1fr;
-  gap: clamp(24px, 4vw, 60px);
+  gap: clamp(16px, 2.5vw, 32px);
   align-items: flex-end;
+}
+
+@media (min-width: 901px) {
+  .maint-intro .container {
+    max-width: min(70vw, 1200px);
+  }
+}
+
+.maint-intro__content {
+  padding-bottom: clamp(40px, 6vw, 80px);
 }
 
 .maint-intro__heading {
