@@ -1153,13 +1153,18 @@ ol {
     0 0 70px 16px rgba(255, 198, 41, 0.65);
 }
 
+/* Linear, not eased: an ease-in-out curve decelerates to a stop at the
+   end of "in" and re-accelerates from a stop at the start of "out" —
+   right at the midpoint where the content swap happens — which reads
+   as a stutter. Constant velocity across both halves keeps the beam
+   moving through that point with no perceptible pause. */
 #ajaxTransition.is-sweeping-in {
-  transition: transform 0.42s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: transform 0.42s linear;
   transform: translateX(0%);
 }
 
 #ajaxTransition.is-sweeping-out {
-  transition: transform 0.42s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: transform 0.42s linear;
   transform: translateX(100%);
 }
 
