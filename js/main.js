@@ -505,6 +505,16 @@ function initHeroTypewriter() {
 function initAjaxNav() {
   if (!window.history || !window.history.pushState || typeof DOMParser === 'undefined') return;
 
+  // The browser's own scroll restoration runs independently around
+  // pushState/popstate and can re-animate the scroll position (respecting
+  // the site's scroll-behavior: smooth) after our own instant reset below
+  // — that race is what caused a visible scroll-to-top after the page had
+  // already swapped in. Scroll position is fully handled by this code
+  // instead.
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+
   const footer = document.querySelector('footer.site-footer');
   if (!footer) return;
 
@@ -652,16 +662,30 @@ function initAjaxNav() {
           history.pushState({}, '', targetUrl.href);
         }
 
+        // The site sets `scroll-behavior: smooth` globally (for in-page
+        // anchor links), which would otherwise make this positioning
+        // itself visibly animate — exactly the scroll-to-top effect this
+        // is meant to avoid. Passing `behavior: 'instant'` alone wasn't
+        // reliably enough to suppress that here, so the CSS property
+        // itself is force-overridden for the moment of the jump, then
+        // restored right after so later in-page anchor clicks still
+        // scroll smoothly as intended.
+        const htmlEl = document.documentElement;
+        const prevScrollBehavior = htmlEl.style.scrollBehavior;
+        htmlEl.style.scrollBehavior = 'auto';
+
         if (targetUrl.hash) {
           const target = document.getElementById(targetUrl.hash.slice(1));
           if (target) {
-            target.scrollIntoView();
+            target.scrollIntoView({ behavior: 'instant', block: 'start' });
           } else {
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
           }
         } else {
-          window.scrollTo(0, 0);
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         }
+
+        htmlEl.style.scrollBehavior = prevScrollBehavior;
 
         // Sweep the beam onward off the right edge while the new content
         // settles in from a soft blur/scale into full focus underneath it.
