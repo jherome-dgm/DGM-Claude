@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initStoriesShowcase();
   initHelpDarkSlider();
   initVideoPosters();
+  initCalendlyButtons();
+  initRealityCheckModal();
   initStickyHeader();
   initScrollReveal();
   initMobileNav();
@@ -182,6 +184,97 @@ function initVideoPosters() {
       poster.classList.remove('hero__video--poster');
       poster.replaceChildren(iframe);
     });
+  });
+}
+
+function initCalendlyButtons() {
+  const buttons = document.querySelectorAll('.calendly-button');
+  if (!buttons.length) return;
+
+  function repositionCloseButton() {
+    const content = document.querySelector('.calendly-popup-content');
+    const closeBtn = document.querySelector('.calendly-popup-close');
+    if (!content || !closeBtn) return;
+    const rect = content.getBoundingClientRect();
+    closeBtn.style.top = `${Math.max(rect.top - 14, 8)}px`;
+    closeBtn.style.left = `${rect.right - 14}px`;
+    closeBtn.style.right = 'auto';
+  }
+
+  function watchPopup() {
+    // The iframe loads async and can change the popup's size shortly after
+    // it first appears, so keep nudging the close button into place for a bit.
+    [0, 100, 300, 600, 1000].forEach((delay) => setTimeout(repositionCloseButton, delay));
+
+    const observer = new MutationObserver(() => {
+      if (document.querySelector('.calendly-overlay')) {
+        repositionCloseButton();
+      } else {
+        observer.disconnect();
+        window.removeEventListener('resize', repositionCloseButton);
+      }
+    });
+    observer.observe(document.body, { childList: true });
+    window.addEventListener('resize', repositionCloseButton);
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      if (!window.Calendly) return;
+      event.preventDefault();
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/danny-kemp/30min' });
+      watchPopup();
+    });
+  });
+}
+
+function initRealityCheckModal() {
+  const triggerPattern = /^start (your |the )?(reality|health) check now$/i;
+  const triggers = Array.from(document.querySelectorAll('a, button')).filter((el) =>
+    triggerPattern.test(el.textContent.trim())
+  );
+  if (!triggers.length) return;
+
+  const modal = document.createElement('div');
+  modal.className = 'rc-modal';
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML = `
+    <div class="rc-modal__overlay" data-rc-close></div>
+    <div class="rc-modal__card" role="dialog" aria-modal="true" aria-labelledby="realityCheckModalHeading">
+      <button type="button" class="rc-modal__close" aria-label="Close" data-rc-close>
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <h3 id="realityCheckModalHeading" class="rc-modal__heading">Take The SME Reality Check</h3>
+      <p class="rc-modal__text">See your best-ever results over the next 12 months. Get your personalised report and recommendations now.</p>
+      <div class="rc-modal__frame-wrap">
+        <iframe class="rc-modal__frame" data-src="https://realitycheck.digitalgroupmedia.com/form" frameborder="0" title="Sales & Marketing Reality Check form"></iframe>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const iframe = modal.querySelector('.rc-modal__frame');
+
+  function openModal(event) {
+    event.preventDefault();
+    if (!iframe.src) {
+      iframe.src = iframe.dataset.src;
+    }
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('rc-modal-open');
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('rc-modal-open');
+  }
+
+  triggers.forEach((trigger) => trigger.addEventListener('click', openModal));
+  modal.querySelectorAll('[data-rc-close]').forEach((el) => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 }
 

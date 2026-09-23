@@ -539,75 +539,15 @@ ol {
 .hero {
   position: relative;
   z-index: 1;
-  background: linear-gradient(250deg, #e06c00 0%, rgba(217, 30, 73, 1) 50%, #d60262 100%);
+  background-image: url('../images/sections/dgm-top-right-graphics.png'), linear-gradient(301deg, #ffb300 0%, #d60062 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, center;
+  background-size: min(700px, 60%) auto, cover;
   overflow: hidden;
   margin-top: calc(-1 * var(--nav-height));
   padding: calc(60px + var(--nav-height)) 0 90px;
 }
 
-.hero__decor {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero__wave {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 47%;
-  height: 100%;
-}
-
-.hero__circle {
-  position: absolute;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-}
-
-.hero__circle--1 {
-  width: 56px;
-  height: 56px;
-  top: 22%;
-  right: 8%;
-}
-
-.hero__circle--2 {
-  width: 40px;
-  height: 40px;
-  bottom: 14%;
-  right: 27%;
-}
-
-.hero__dot {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.hero__dot--1 {
-  width: 14px;
-  height: 14px;
-  top: 29%;
-  right: 5.5%;
-}
-
-.hero__dot--2 {
-  width: 16px;
-  height: 16px;
-  bottom: 22%;
-  right: 30%;
-}
-
-.hero__plus {
-  position: absolute;
-  top: 68%;
-  left: 2%;
-  width: 32px;
-  height: 32px;
-  opacity: 0.5;
-}
 
 .hero__inner {
   position: relative;
@@ -4065,5 +4005,895 @@ ol {
 
   .contact-form__map {
     min-height: 320px;
+  }
+}
+
+/* ==========================================================================
+   Review: Hero (slim banner variant)
+   ========================================================================== */
+
+.review-hero {
+  position: relative;
+  z-index: 1;
+  background-image: url('../images/sections/dgm-top-right-graphics.png'), linear-gradient(301deg, #ffb300 0%, #d60062 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, center;
+  background-size: min(700px, 60%) auto, cover;
+  overflow: hidden;
+  margin-top: calc(-1 * var(--nav-height));
+  padding: calc(70px + var(--nav-height)) 0 60px;
+  text-align: center;
+}
+
+.review-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+.review-hero__eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+}
+
+.review-hero__heading {
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.review-hero__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.review-hero__contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.review-hero__contact svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.review-hero__divider {
+  opacity: 0.6;
+}
+
+.review-hero__badges-label {
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 20px;
+}
+
+.review-hero__badges {
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .review-hero__contact {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .review-hero__divider {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Review: Directors' Review Form
+   ========================================================================== */
+
+.review-form {
+  background: #ffffff;
+  padding: clamp(50px, 7vw, 90px) 0;
+}
+
+.review-form__intro {
+  max-width: 760px;
+  text-align: center;
+}
+
+.review-form__heading {
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+}
+
+.review-form__intro > p {
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.review-form__link {
+  color: var(--color-pink);
+  font-weight: 600;
+}
+
+.review-form__photo {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.review-form__highlight {
+  color: #f2a93b;
+}
+
+.review-form__underline {
+  text-decoration: underline;
+}
+
+.review-form__notice {
+  background: #f7f7f8;
+  border-radius: 8px;
+  padding: 28px 32px;
+  text-align: left;
+  margin-top: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.review-form__notice-label {
+  color: #e8512f;
+  font-weight: 800;
+}
+
+.review-form__form-wrap {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: clamp(40px, 6vw, 64px);
+}
+
+.review-form__form-heading {
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 32px;
+}
+
+.review-form__field {
+  margin-bottom: 28px;
+}
+
+.review-form__field label {
+  display: block;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 10px;
+}
+
+.review-form__required {
+  color: var(--color-pink);
+}
+
+.review-form__field input,
+.review-form__field textarea {
+  width: 100%;
+  border: none;
+  background: #f2f3f5;
+  border-radius: 4px;
+  padding: 15px 18px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-dark-text);
+  resize: none;
+}
+
+.review-form__field input::placeholder,
+.review-form__field textarea::placeholder {
+  color: #8a8d99;
+}
+
+.review-form__field input:focus,
+.review-form__field textarea:focus {
+  outline: 2px solid var(--color-pink);
+  outline-offset: -2px;
+}
+
+.review-form__submit {
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Reality Check: Hero
+   ========================================================================== */
+
+.rc-hero {
+  background: #ffffff;
+  padding: clamp(40px, 6vw, 70px) 0;
+}
+
+.rc-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) 1fr;
+  gap: clamp(28px, 4vw, 60px);
+  align-items: center;
+}
+
+.rc-hero__heading {
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+}
+
+.rc-hero__accent {
+  color: var(--color-pink);
+}
+
+.rc-hero__subheading-inline {
+  font-size: 0.5em;
+  font-weight: 700;
+  color: #666;
+}
+
+.rc-hero__content p {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.rc-hero__content em {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.rc-hero__list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.rc-hero__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--color-pink);
+  margin-bottom: 10px;
+}
+
+.rc-hero__list-icon {
+  flex-shrink: 0;
+}
+
+.rc-hero__video {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.rc-hero__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .rc-hero__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Global: Hero backgrounds — drop the top-right graphic on small screens
+   Placed last so it wins over the earlier same-specificity .hero / .review-hero rules.
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .hero,
+  .review-hero {
+    background-image: linear-gradient(301deg, #ffb300 0%, #d60062 100%);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* ==========================================================================
+   Reality Check: What Is It / What's The Catch
+   ========================================================================== */
+
+.rc-what {
+  background: #f7f7f8;
+  padding: clamp(50px, 7vw, 80px) 0;
+}
+
+.rc-what__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.rc-what__heading {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-pink);
+  margin-bottom: 14px;
+}
+
+.rc-what__col p {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.rc-what__cta {
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .rc-what__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Reality Check: Trusted By (static grid)
+   ========================================================================== */
+
+.rc-trusted {
+  background: #ffffff;
+  padding: clamp(40px, 6vw, 64px) 0;
+  text-align: center;
+}
+
+.rc-trusted__heading {
+  color: #444;
+  margin-bottom: 32px;
+}
+
+.rc-trusted__heading strong {
+  color: var(--color-pink);
+}
+
+.rc-trusted__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rc-trusted__grid img {
+  width: 100%;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .rc-trusted__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Reality Check: Why It's Worth a Few Minutes
+   ========================================================================== */
+
+.rc-why {
+  background: #f7f7f8;
+  padding: clamp(50px, 7vw, 90px) 0;
+  text-align: center;
+}
+
+.rc-why__heading {
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 16px;
+}
+
+.rc-why__subheading {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  color: #555;
+}
+
+.rc-why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 40px;
+  max-width: 980px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.rc-why__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.rc-why__number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-pink);
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.rc-why__item-title {
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.rc-why__item p {
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .rc-why__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .rc-why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Reality Check: What You'll Discover (10-item grid)
+   ========================================================================== */
+
+.rc-discover {
+  background: #ffffff;
+  padding: clamp(50px, 7vw, 90px) 0;
+  text-align: center;
+}
+
+.rc-discover__heading {
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 16px;
+}
+
+.rc-discover__subheading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  color: #555;
+}
+
+.rc-discover__subheading strong {
+  color: var(--color-pink);
+}
+
+.rc-discover__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(24px, 3vw, 36px) clamp(16px, 2vw, 28px);
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.rc-discover__icon {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.rc-discover__item-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.rc-discover__item p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .rc-discover__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .rc-discover__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Reality Check: Who's This For
+   ========================================================================== */
+
+.rc-who {
+  background: var(--color-navy);
+  overflow: hidden;
+}
+
+.rc-who__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.rc-who__content {
+  padding: clamp(40px, 6vw, 72px) clamp(24px, 5vw, 64px);
+  color: #fff;
+}
+
+.rc-who__heading {
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.rc-who__content > p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+.rc-who__content strong {
+  color: #fff;
+}
+
+.rc-who__lead {
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.rc-who__list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.rc-who__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 14px;
+}
+
+.rc-who__list li strong {
+  color: #fff;
+}
+
+.rc-who__check {
+  flex-shrink: 0;
+  color: var(--color-pink);
+  margin-top: 3px;
+}
+
+.rc-who__check svg {
+  width: 18px;
+  height: 18px;
+}
+
+.rc-who__photo {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .rc-who__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rc-who__photo {
+    min-height: 260px;
+  }
+}
+
+/* ==========================================================================
+   Reality Check: Testimonials + Badges
+   ========================================================================== */
+
+.rc-testimonials {
+  background: #f7f7f8;
+  padding: clamp(50px, 7vw, 80px) 0;
+  text-align: center;
+}
+
+.rc-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.rc-testimonials__video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.rc-testimonials__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.rc-testimonials__badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rc-testimonials__badges img {
+  height: 48px;
+  width: auto;
+  border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+  .rc-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Reality Check: How It Works (4 steps)
+   ========================================================================== */
+
+.rc-steps {
+  background: #f7f7f8;
+  padding: clamp(50px, 7vw, 90px) 0;
+  text-align: center;
+}
+
+.rc-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(32px, 4vw, 56px) clamp(40px, 6vw, 80px);
+  max-width: 900px;
+  margin: 0 auto 48px;
+  text-align: left;
+}
+
+.rc-steps__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.rc-steps__number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-pink);
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.rc-steps__item-title {
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 6px;
+}
+
+.rc-steps__item p {
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .rc-steps__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Reality Check: Closing CTA
+   ========================================================================== */
+
+.rc-cta {
+  position: relative;
+  background: linear-gradient(301deg, #ffb300 0%, #d60062 100%);
+  padding: clamp(50px, 7vw, 80px) 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.rc-cta__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+.rc-cta__heading {
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.rc-cta__inner p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+}
+
+.rc-cta__inner p em {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.rc-cta .btn {
+  margin-top: 16px;
+}
+
+/* ==========================================================================
+   Global: Reality Check Modal (popup form)
+   ========================================================================== */
+
+.rc-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.rc-modal.is-open {
+  display: flex;
+}
+
+.rc-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.65);
+  backdrop-filter: blur(2px);
+}
+
+.rc-modal__card {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  padding: clamp(28px, 4vw, 44px);
+  max-width: 560px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  animation: rc-modal-in 0.25s ease;
+}
+
+@keyframes rc-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.rc-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f3f5;
+  color: var(--color-dark-text);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.rc-modal__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.rc-modal__close:hover {
+  background: var(--color-pink);
+  color: #ffffff;
+}
+
+.rc-modal__heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+  padding: 0 32px;
+}
+
+.rc-modal__text {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.rc-modal__frame-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f7f7f8;
+  min-height: 250px;
+}
+
+.rc-modal__frame {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
+body.rc-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .rc-modal__card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .rc-modal__frame {
+    height: 380px;
   }
 }
