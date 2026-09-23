@@ -1112,6 +1112,72 @@ ol {
 }
 
 /* ==========================================================================
+   Global: AJAX navigation (swap header+content without a full page reload)
+   A gradient "energy beam" sweeps across the viewport (using the same
+   brand gradient as the hero sections) and hides the content swap; the
+   page itself settles in with a slight scale/blur-to-sharp reveal.
+   ========================================================================== */
+
+#ajaxRegion {
+  transition: opacity 0.25s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+  will-change: transform, filter;
+}
+
+#ajaxRegion.is-navigating {
+  opacity: 0.4;
+  transform: scale(0.98);
+  filter: blur(10px);
+}
+
+#ajaxTransition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: linear-gradient(301deg, #ffb300 0%, #d60062 55%, #211c45 100%);
+  /* Parked well past the edge (not just -100%) so the glowing edge's
+     box-shadow blur doesn't bleed onto the page while at rest. */
+  transform: translateX(calc(-100% - 100px));
+}
+
+#ajaxTransition::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -3px;
+  bottom: 0;
+  width: 5px;
+  background: #fff;
+  box-shadow:
+    0 0 24px 6px rgba(255, 255, 255, 0.9),
+    0 0 70px 16px rgba(255, 198, 41, 0.65);
+}
+
+#ajaxTransition.is-sweeping-in {
+  transition: transform 0.42s cubic-bezier(0.65, 0, 0.35, 1);
+  transform: translateX(0%);
+}
+
+#ajaxTransition.is-sweeping-out {
+  transition: transform 0.42s cubic-bezier(0.65, 0, 0.35, 1);
+  transform: translateX(100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ajaxRegion,
+  #ajaxTransition,
+  #ajaxTransition.is-sweeping-in,
+  #ajaxTransition.is-sweeping-out {
+    transition: none !important;
+  }
+
+  #ajaxRegion.is-navigating {
+    transform: none;
+    filter: none;
+  }
+}
+
+/* ==========================================================================
    Global: Back to top
    ========================================================================== */
 
