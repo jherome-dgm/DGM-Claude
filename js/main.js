@@ -530,6 +530,9 @@ function initAjaxNav() {
   const SWEEP_MS = reducedMotion ? 0 : 420;
 
   let navToken = 0;
+  let isNavigating = false;
+  let pendingNav = null;
+  let currentNavUrl = null;
 
   function extractRegionNodes(doc) {
     const docFooter = doc.querySelector('footer.site-footer');
@@ -569,9 +572,42 @@ function initAjaxNav() {
     return true;
   }
 
-  function navigate(url, push) {
+  // Rapid/duplicate navigation requests (double-clicks, mashing a link) are
+  // never run concurrently — only one is ever in flight on the shared beam
+  // and region. Without this, overlapping calls would each reset and mutate
+  // the same overlay/region classes, and a call that got superseded before
+  // its fetch resolved would silently bail out with no cleanup — which is
+  // exactly what caused clicks to sometimes play the animation without the
+  // URL or page ever actually updating. A request that arrives while
+  // another is still running is queued instead, and only the latest queued
+  // one survives, so every click always either runs immediately or runs
+  // next — never lost.
+  function requestNavigate(url, push) {
+    const normalizedUrl = new URL(url, location.href).href;
+
+    if (isNavigating) {
+      // Already mid-flight to this exact page — no need to queue a repeat.
+      if (normalizedUrl === currentNavUrl) return;
+      pendingNav = { url, push };
+      return;
+    }
+    runNavigate(url, push);
+  }
+
+  function runNavigate(url, push) {
+    isNavigating = true;
     const token = ++navToken;
     const targetUrl = new URL(url, location.href);
+    currentNavUrl = targetUrl.href;
+
+    function settle() {
+      isNavigating = false;
+      if (pendingNav) {
+        const next = pendingNav;
+        pendingNav = null;
+        requestNavigate(next.url, next.push);
+      }
+    }
 
     // Reset the beam to its off-screen starting position (in case a
     // previous sweep-out is still mid-flight), then sweep it in.
@@ -637,10 +673,12 @@ function initAjaxNav() {
         window.setTimeout(() => {
           if (token !== navToken) return;
           overlay.classList.remove('is-sweeping-out');
+          settle();
         }, SWEEP_MS);
       })
       .catch(() => {
         if (token !== navToken) return;
+        settle();
         window.location.href = targetUrl.href;
       });
   }
@@ -653,10 +691,10 @@ function initAjaxNav() {
     if (!shouldIntercept(link)) return;
 
     event.preventDefault();
-    navigate(link.href, true);
+    requestNavigate(link.href, true);
   });
 
   window.addEventListener('popstate', () => {
-    navigate(location.href, false);
+    requestNavigate(location.href, false);
   });
 }
